@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,6 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @Entity
 @Table(name = "tb_fazenda")
+@NamedQuery(name = "Fazenda.getAll", query = "from Fazenda")
 public class Fazenda {
 
 	@Id
@@ -31,6 +33,10 @@ public class Fazenda {
 	@Column(name = "nm_mensagem")
 	private String mensagem;
 	
+	//Default Constructor
+	public Fazenda(){
+
+	}
 	
 	public Fazenda(String nome_fazenda, String nome_representate, String email, String mensagem) {
 		super();
@@ -85,4 +91,10 @@ public class Fazenda {
 		this.mensagem = mensagem;
 	}
 
+	@Override
+	public String toString() {
+		return "Fazenda [nome_fazenda=" + nome_fazenda + ", nome_representate=" + nome_representate + ", email=" + email
+				+ ", mensagem=" + mensagem + "]";
+	}
+	
 }

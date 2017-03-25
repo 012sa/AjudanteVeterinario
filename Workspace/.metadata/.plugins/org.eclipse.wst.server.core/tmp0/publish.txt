@@ -1,3 +1,4 @@
 #Tomcat publish data
-#Sat Mar 25 12:11:05 GMT-03:00 2017
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Diego\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-web\\2.7\\log4j-web-2.7.jar=WEB-INF/lib/log4j-web-2.7.jar
+#Sat Mar 25 18:52:49 GMT-03:00 2017
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Diego\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-web\\2.7\\log4j-web-2.7.jar=C\:\\Java\\Web\\pweb\\apache-tomcat-8.0.42\\webapps\\RestEasyApp\\WEB-INF\\lib\\log4j-web-2.7.jar
+org.eclipse.jst.jee.server\:RestEasyApp=C\:\\Java\\Web\\pweb\\apache-tomcat-8.0.42\\webapps\\RestEasyApp
