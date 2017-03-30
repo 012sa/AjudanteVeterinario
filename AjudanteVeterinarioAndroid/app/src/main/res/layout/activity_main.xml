@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sarah.ajudanteveterinarioandroid.MainActivity">
+
+    <LinearLayoutL>
+
+    </LinearLayoutL>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:text="Tarefas Mensais"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="188dp" />
+
+    <Button
+    android:id="@+id/button4"
+    android:layout_width="320dp"
+    android:layout_height="62dp"
+    android:text="Fazendas"
+    tools:layout_editor_absoluteX="32dp"
+    tools:layout_editor_absoluteY="275dp" />
+
+    <Button
+    android:id="@+id/button5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sair"
+    tools:layout_editor_absoluteX="264dp"
+    tools:layout_editor_absoluteY="447dp" />
+</android.support.constraint.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.sarah.ajudanteveterinarioandroid;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -48,10 +49,16 @@ public class LoginActivity extends Activity {
             String password = String.valueOf(mPasswordView.getText());
             // Validates the User name and Password for admin, admin
             if (username.equals("admin") && password.equals("admin")) {
-                } else {
-                }
+
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(i);
+
+
+            } else {
+                mPasswordView.setText("");
+                mEmailView.setText("");
+            }
             }
         });
     }
-    
 }
