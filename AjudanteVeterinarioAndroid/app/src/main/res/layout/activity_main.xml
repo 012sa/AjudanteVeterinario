@@ -6,31 +6,29 @@
     android:layout_height="match_parent"
     tools:context="com.example.sarah.ajudanteveterinarioandroid.MainActivity">
 
-    <LinearLayoutL>
-
-    </LinearLayoutL>
-
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/tarefasMensais"
         android:layout_width="320dp"
         android:layout_height="62dp"
         android:text="Tarefas Mensais"
         tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="188dp" />
-
+        tools:layout_editor_absoluteY="188dp"
+        tools:ignore="MissingConstraints" />
     <Button
-    android:id="@+id/button4"
-    android:layout_width="320dp"
-    android:layout_height="62dp"
-    android:text="Fazendas"
-    tools:layout_editor_absoluteX="32dp"
-    tools:layout_editor_absoluteY="275dp" />
-
+        android:id="@+id/fazendas"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:text="Fazendas"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="275dp"
+        tools:ignore="MissingConstraints" />
     <Button
-    android:id="@+id/button5"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Sair"
-    tools:layout_editor_absoluteX="264dp"
-    tools:layout_editor_absoluteY="447dp" />
+        android:id="@+id/sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="447dp"
+        tools:ignore="MissingConstraints" />
+
 </android.support.constraint.ConstraintLayout>
