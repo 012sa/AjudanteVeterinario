@@ -10,8 +10,11 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="nome_da_fazenda">Nome da Fazenda</string>
+    <string name="nome_do_proprietario">Nome do Proprietário da Fazenda</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="Add">Cadastrar</string>
     <string name="title_activity_listar_fazendas">ListarFazendas</string>
 </resources>

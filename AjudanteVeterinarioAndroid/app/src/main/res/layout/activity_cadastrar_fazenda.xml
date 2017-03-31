@@ -5,5 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.sarah.ajudanteveterinarioandroid.CadastrarFazenda">
+    <AutoCompleteTextView
+        android:id="@+id/nomeFazenda"
+        android:layout_width="352dp"
+        android:layout_height="41dp"
+        android:hint="@string/nome_da_fazenda"
+        android:maxLines="1"
+        android:singleLine="true"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="164dp"
+        tools:ignore="MissingConstraints" />
+    <AutoCompleteTextView
+        android:id="@+id/nomeProprietario"
+        android:layout_width="352dp"
+        android:layout_height="41dp"
+        android:hint="@string/nome_do_proprietario"
+        android:maxLines="1"
+        android:singleLine="true"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="235dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/add_fazenda_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Add"
+        tools:layout_editor_absoluteY="447dp"
+        tools:layout_editor_absoluteX="263dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonSair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="447dp"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

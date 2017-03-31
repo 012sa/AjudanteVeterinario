@@ -11,24 +11,35 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:tint="@android:color/background_dark"
+        app:backgroundTint="@android:color/holo_blue_bright"
         app:fabSize="mini"
+        app:rippleColor="@android:color/background_dark"
         app:srcCompat="@android:drawable/ic_input_add"
-        tools:layout_editor_absoluteY="455dp"
-        tools:layout_editor_absoluteX="328dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="373dp"
+        tools:layout_editor_absoluteY="483dp" />
 
     <ScrollView
         android:id="@+id/ScrollView"
-        android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_width="417dp"
+        android:layout_height="521dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/tarefasMensaisListView"
+                android:layout_width="wrap_content"
+                android:layout_height="557dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
 
             <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
@@ -40,10 +51,6 @@
                     android:orientation="vertical" />
             </android.support.v4.widget.NestedScrollView>
 
-            <ListView
-                android:id="@+id/ListFazendas"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
