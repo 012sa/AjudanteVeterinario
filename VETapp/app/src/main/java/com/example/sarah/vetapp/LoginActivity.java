@@ -34,6 +34,7 @@ public class LoginActivity extends Activity {
                     @Override
                     public void onClick(View view) {
                         // Stores User name
+                        //mudar quando a url for liberada
                         String username = String.valueOf(mEmailView.getText());
                         // Stores Password
                         String password = String.valueOf(mPasswordView.getText());

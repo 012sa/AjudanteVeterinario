@@ -11,14 +11,13 @@ public class CadastrarFazenda extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_fazenda);
-        Button msair = (Button) findViewById(R.id.buttonSair);
-        msair.setOnClickListener( new View.onClickListener() {
-                                      @Override
-                                      public onClick(View v) {
-                                          Intent i = new Intent(CadastrarFazenda.this, MainActivity.class);
-                                          startActivity(i);
-                                      }
-        }
-        );
+        final Button bsair = (Button) findViewById(R.id.buttonSair);
+        bsair.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CadastrarFazenda.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
