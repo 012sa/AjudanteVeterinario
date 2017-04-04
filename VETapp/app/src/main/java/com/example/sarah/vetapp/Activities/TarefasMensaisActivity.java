@@ -1,19 +1,21 @@
-package com.example.sarah.vetapp;
+package com.example.sarah.vetapp.Activities;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-public class TarefasMensais extends AppCompatActivity {
+import com.example.sarah.vetapp.Activities.MainActivity;
+import com.example.sarah.vetapp.R;
+
+public class TarefasMensaisActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarefas_mensais);
-        FloatingActionButton fsair = (FloatingActionButton) findViewById(R.id.floatingActionButtonSair);
+        FloatingActionButton fsair = (FloatingActionButton) findViewById(R.id.buttonSair);
         fsair.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

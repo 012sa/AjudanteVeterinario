@@ -1,4 +1,4 @@
-package com.example.sarah.vetapp;
+package com.example.sarah.vetapp.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.sarah.vetapp.R;
 
 public class LoginActivity extends Activity {
 

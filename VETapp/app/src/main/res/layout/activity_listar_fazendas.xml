@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sarah.vetapp.ListarFazendas">
+    tools:background="@color/backgroundGreen"
+    tools:context="com.example.sarah.vetapp.Activities.ListarFazendasActivity">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/add_fazendas"
@@ -45,7 +46,7 @@
                     android:orientation="vertical" >
 
                     <ListView
-                        android:id="@+id/tarefasMensaisListView"
+                        android:id="@+id/listarFazendaListView"
                         android:layout_width="match_parent"
                         android:layout_height="726dp"
                         tools:ignore="MissingConstraints"
