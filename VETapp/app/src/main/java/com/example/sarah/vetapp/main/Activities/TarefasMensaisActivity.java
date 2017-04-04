@@ -1,4 +1,4 @@
-package com.example.sarah.vetapp.Activities;
+package com.example.sarah.vetapp.main.Activities;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.sarah.vetapp.Activities.MainActivity;
 import com.example.sarah.vetapp.R;
 
 public class TarefasMensaisActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.sarah.vetapp.Activities;
+package com.example.sarah.vetapp.main.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;

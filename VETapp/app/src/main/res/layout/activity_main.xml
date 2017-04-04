@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:background="@color/backgroundGreen"
-    tools:context="com.example.sarah.vetapp.Activities.MainActivity">
+    tools:context="com.example.sarah.vetapp.main.Activities.MainActivity">
 
     <Button
         android:id="@+id/fazendas"

@@ -1,5 +1,7 @@
-package Network;
+package com.example.sarah.vetapp.main.Network;
 
+import com.example.sarah.vetapp.main.Entity.Fazenda;
+import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;

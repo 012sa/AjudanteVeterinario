@@ -1,4 +1,4 @@
-package com.example.sarah.vetapp.Activities;
+package com.example.sarah.vetapp.main.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -40,8 +40,10 @@ public class LoginActivity extends Activity {
                         String username = String.valueOf(mEmailView.getText());
                         // Stores Password
                         String password = String.valueOf(mPasswordView.getText());
+
                         // Validates the User name and Password for admin, admin
-                        if (username.equals("admin") && password.equals("admin")) {
+
+                        if (username.equals("admin") && password.equals("admin")){
                             Intent i = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(i);
                         } else {

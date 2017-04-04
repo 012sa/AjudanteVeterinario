@@ -1,4 +1,4 @@
-package Network;
+package com.example.sarah.vetapp.main.Network;
 
 /**
  * Created by IFPB on 04/04/2017.

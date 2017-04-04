@@ -1,4 +1,4 @@
-package com.example.sarah.vetapp.Activities;
+package com.example.sarah.vetapp.main.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
