@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sarah.vetapp.ListarFazendas">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_fazendas"
+        android:layout_width="47dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:tint="@android:color/background_dark"
+        app:backgroundTint="@android:color/holo_blue_bright"
+        app:fabSize="mini"
+        app:rippleColor="@android:color/background_dark"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="447dp" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="417dp"
+        android:layout_height="521dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </android.support.v4.widget.NestedScrollView>
+
+            <ListView
+                android:id="@+id/tarefasMensaisListView"
+                android:layout_width="372dp"
+                android:layout_height="522dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

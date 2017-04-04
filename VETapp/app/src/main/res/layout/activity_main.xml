@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sarah.vetapp.MainActivity">
+
+    <Button
+        android:id="@+id/tarefasMensais"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:text="@string/monthly_task"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="188dp"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/fazendas"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:text="@string/farm"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="275dp"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Exit"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="447dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
