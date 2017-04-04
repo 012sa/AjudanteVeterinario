@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,37 +7,43 @@
     tools:context="com.example.sarah.vetapp.MainActivity">
 
     <Button
-        android:id="@+id/tarefasMensais"
-        android:layout_width="320dp"
-        android:layout_height="62dp"
-        android:text="@string/monthly_task"
-        tools:layout_editor_absoluteY="213dp"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
-    <Button
         android:id="@+id/fazendas"
-        android:layout_width="320dp"
+        android:layout_width="match_parent"
         android:layout_height="62dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/sair"
         android:text="@string/farm"
-        tools:layout_editor_absoluteX="32dp"
         tools:ignore="MissingConstraints"
-        app:layout_constraintBottom_toTopOf="@+id/sair"
-        app:layout_constraintTop_toBottomOf="@+id/tarefasMensais" />
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="227dp"
+        android:layout_alignParentEnd="true" />
+
     <Button
-        android:id="@+id/sair"
-        android:layout_width="wrap_content"
+        android:id="@+id/tarefasMensais"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Exit"
-        tools:layout_editor_absoluteX="264dp"
-        tools:layout_editor_absoluteY="447dp"
-        tools:ignore="MissingConstraints" />
+        android:text="@string/monthly_task"
+        tools:drawableBottom="@drawable/task"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="183dp"
+        android:layout_above="@+id/fazendas"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="86dp" />
 
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="20dp"
-        android:orientation="horizontal" />
+        <Button
+            android:id="@+id/sair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Exit"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="376dp"
+            tools:layout_editor_absoluteY="655dp"
+            android:layout_marginBottom="84dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="22dp" />
 
-</android.support.constraint.ConstraintLayout>
+
+</android.widget.RelativeLayout>

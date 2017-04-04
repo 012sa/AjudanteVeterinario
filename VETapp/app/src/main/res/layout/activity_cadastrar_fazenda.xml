@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.sarah.vetapp.CadastrarFazenda">
+
     <AutoCompleteTextView
         android:id="@+id/nomeFazenda"
         android:layout_width="352dp"
@@ -12,28 +13,52 @@
         android:hint="@string/name_of_farm"
         android:maxLines="1"
         android:singleLine="true"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="164dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginTop="102dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/nomeProprietario" />
+
     <AutoCompleteTextView
         android:id="@+id/nomeProprietario"
         android:layout_width="352dp"
         android:layout_height="41dp"
-        android:hint="@string/name_of_farm"
+        android:hint="@string/name_of_owner"
+        android:maxLines="1"
+        android:singleLine="true"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="235dp"
+        android:layout_marginBottom="57dp"
+        android:layout_above="@+id/EmailProprietario"
+        android:layout_centerHorizontal="true" />
+
+    <AutoCompleteTextView
+        android:id="@+id/EmailProprietario"
+        android:layout_width="352dp"
+        android:layout_height="41dp"
+        android:hint="@string/prompt_email"
         android:maxLines="1"
         android:singleLine="true"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="235dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/nomeProprietario" />
 
     <Button
-        android:id="@+id/add_fazenda_button"
+        android:id="@+id/add_fazenda_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Add"
-        tools:layout_editor_absoluteY="447dp"
-        tools:layout_editor_absoluteX="263dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="471dp"
+        tools:layout_editor_absoluteX="290dp"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/EmailProprietario"
+        android:layout_marginTop="56dp"
+        android:layout_alignStart="@+id/EmailProprietario"
+        android:layout_alignEnd="@+id/EmailProprietario" />
 
     <Button
         android:id="@+id/buttonSair"
@@ -42,6 +67,9 @@
         android:text="@string/Exit"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="447dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="96dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/add_fazenda_email" />
 
-</android.support.constraint.ConstraintLayout>
+</android.widget.RelativeLayout>
