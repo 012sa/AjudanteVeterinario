@@ -1,4 +1,4 @@
-package com.example.sarah.vetapp.Activities;
+package com.example.sarah.vetapp;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,14 +9,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.sarah.vetapp.R;
-
 public class LoginActivity extends Activity {
 
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
-    private View mProgressView = findViewById(R.id.login_progress);
-    private View mLoginFormView = findViewById(R.id.login_form);
+    private View mProgressView;
+    private View mLoginFormView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +27,8 @@ public class LoginActivity extends Activity {
         mSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                mLoginFormView = findViewById(R.id.login_form);
+                mProgressView = findViewById(R.id.login_progress);
                 mSignInButton.setOnClickListener(new OnClickListener() {
 
                     @Override
@@ -38,10 +38,8 @@ public class LoginActivity extends Activity {
                         String username = String.valueOf(mEmailView.getText());
                         // Stores Password
                         String password = String.valueOf(mPasswordView.getText());
-
                         // Validates the User name and Password for admin, admin
-
-                        if (username.equals("admin") && password.equals("admin")){
+                        if (username.equals("admin") && password.equals("admin")) {
                             Intent i = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(i);
                         } else {

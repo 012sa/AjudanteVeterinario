@@ -1,12 +1,13 @@
-package com.example.sarah.vetapp.Activities;
+package com.example.sarah.vetapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.preference.PreferenceManager;
+import android.provider.Settings;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import com.example.sarah.vetapp.R;
 
 public class MainActivity extends Activity {
 
@@ -19,7 +20,7 @@ public class MainActivity extends Activity {
         bfazendas.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent ilf = new Intent(MainActivity.this, ListarFazendasActivity.class);
+                Intent ilf = new Intent(MainActivity.this, ListarFazendas.class);
                 startActivity(ilf);
             }
         });
@@ -27,7 +28,7 @@ public class MainActivity extends Activity {
         btarefasMensais.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent itm = new Intent(MainActivity.this, TarefasMensaisActivity.class);
+                Intent itm = new Intent(MainActivity.this, TarefasMensais.class);
                 startActivity(itm);
             }
         });

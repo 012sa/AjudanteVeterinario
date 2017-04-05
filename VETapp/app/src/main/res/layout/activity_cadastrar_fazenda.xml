@@ -3,82 +3,78 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_green_dark"
     tools:background="@color/backgroundGreen"
-    tools:context="com.example.sarah.vetapp.Activities.CadastrarFazendaActivity">
+    android:layout_height="match_parent"
+    tools:context="com.example.sarah.vetapp.CadastrarFazenda">
 
-    <android.support.design.widget.TextInputEditText
+    <AutoCompleteTextView
         android:id="@+id/nomeFazenda"
         android:layout_width="352dp"
         android:layout_height="41dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/nomeProprietario"
-        android:layout_marginTop="102dp"
         android:hint="@string/name_of_farm"
         android:maxLines="1"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
+        android:singleLine="true"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="164dp"
-        tools:textColor="@android:color/black" />
+        android:layout_marginTop="102dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/nomeProprietario" />
 
-    <android.support.design.widget.TextInputEditText
+    <AutoCompleteTextView
         android:id="@+id/nomeProprietario"
         android:layout_width="352dp"
         android:layout_height="41dp"
-        android:layout_below="@+id/nomeFazenda"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp"
         android:hint="@string/name_of_owner"
         android:maxLines="1"
-        android:textStyle="bold"
         android:singleLine="true"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="235dp" />
+        tools:layout_editor_absoluteY="235dp"
+        android:layout_marginBottom="57dp"
+        android:layout_above="@+id/EmailProprietario"
+        android:layout_centerHorizontal="true" />
 
-    <android.support.design.widget.TextInputEditText
-        android:id="@+id/emailProprietario"
+    <AutoCompleteTextView
+        android:id="@+id/EmailProprietario"
         android:layout_width="352dp"
         android:layout_height="41dp"
-        android:textStyle="bold"
-        android:layout_alignStart="@+id/nomeProprietario"
-        android:layout_centerVertical="true"
         android:hint="@string/prompt_email"
         android:maxLines="1"
         android:singleLine="true"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="235dp" />
+        tools:layout_editor_absoluteY="235dp"
+        tools:ignore="MissingConstraints"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/nomeProprietario" />
 
     <Button
-        android:id="@+id/add_fazenda"
+        android:id="@+id/add_fazenda_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="81dp"
-        android:text="@string/Add"
         android:textColor="@android:color/background_light"
         tools:background="@android:color/background_dark"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="290dp"
+        android:text="@string/Add"
         tools:layout_editor_absoluteY="471dp"
-        android:layout_below="@+id/emailProprietario"
-        android:layout_alignStart="@+id/emailProprietario"
-        android:layout_alignEnd="@+id/emailProprietario" />
+        tools:layout_editor_absoluteX="290dp"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/EmailProprietario"
+        android:layout_marginTop="56dp"
+        android:layout_alignStart="@+id/EmailProprietario"
+        android:layout_alignEnd="@+id/EmailProprietario" />
 
-    <android.support.design.widget.FloatingActionButton
+    <Button
         android:id="@+id/buttonSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
-        app:backgroundTint="@android:color/holo_blue_dark"
-        app:srcCompat="?attr/actionModeCloseDrawable"
-        tools:ignore="MissingConstraints"
+        android:text="@string/Exit"
+        android:textColor="@android:color/background_light"
+        tools:background="@android:color/background_dark"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="447dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="96dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/add_fazenda" />
+        android:layout_alignEnd="@+id/add_fazenda_email" />
 
 </android.widget.RelativeLayout>

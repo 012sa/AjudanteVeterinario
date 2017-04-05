@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sarah.vetapp.Activities.TarefasMensaisActivity"
-    tools:background="@color/backgroundGreen">
+    tools:background="@color/backgroundGreen"
+    tools:context="com.example.sarah.vetapp.TarefasMensais">
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/buttonSair"
+        android:id="@+id/floatingActionButtonSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/sair"
-        android:layout_alignParentBottom="true"
-        app:backgroundTint="@android:color/holo_blue_dark"
+        android:clickable="true"
+        android:tint="@android:color/white"
+        app:backgroundTint="@android:color/holo_blue_bright"
+        app:fabSize="mini"
         app:srcCompat="?attr/actionModeCloseDrawable"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="406dp"
-        tools:layout_editor_absoluteY="624dp" />
+        tools:layout_editor_absoluteX="394dp"
+        tools:layout_editor_absoluteY="631dp"
+        tools:ignore="MissingConstraints" />
 
     <ListView
         android:id="@+id/tarefasMensaisListView"

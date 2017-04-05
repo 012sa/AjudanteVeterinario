@@ -2,7 +2,6 @@
     <string name="app_name">VETapp</string>
 
     <string name="prompt_email">Email</string>
-    <string name="id">ID</string>
     <string name="prompt_password">Senha</string>
     <string name="action_sign_in">Entrar</string>
     <string name="action_sign_in_short">Sign in</string>
@@ -10,9 +9,9 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="name_of_farm">Nome da Propriedade</string>
+    <string name="name_of_farm">Nome da Fazenda</string>
     <string name="farm">Fazenda</string>
-    <string name="name_of_owner">Nome do Proprietário</string>
+    <string name="name_of_owner">Nome do Proprietário da Fazenda</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
