@@ -1,0 +1,32 @@
+package br.edu.ifpb.resteasyapp.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import br.edu.ifpb.resteasyapp.entidade.FazendaInteressada;
+
+public class FazendaInteressadaDao extends GenericDao<Integer, FazendaInteressada>{
+
+	private static FazendaInteressadaDao instance;
+	
+	public static FazendaInteressadaDao getInstance() {		
+		instance = new FazendaInteressadaDao();		
+		return instance;
+	}
+	
+	@Override
+	public List<FazendaInteressada> getAll() throws SQLException {
+		return super.getAll("FazendaInteressada.getAll");
+	}
+
+	@Override
+	public Class<?> getEntityClass() {
+		return FazendaInteressada.class;
+	}
+
+	@Override
+	public FazendaInteressada find(FazendaInteressada entity) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
