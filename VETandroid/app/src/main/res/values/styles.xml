@@ -7,7 +7,10 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="uttonstyle"
+    <style name="buttonStyle" parent="TextAppearance.AppCompat.Widget.Button">
+        <item name="colorBackground">@color/colorPrimaryText</item>
+        <item name="textColor">@color/colorPrimaryLight</item>
+    </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
