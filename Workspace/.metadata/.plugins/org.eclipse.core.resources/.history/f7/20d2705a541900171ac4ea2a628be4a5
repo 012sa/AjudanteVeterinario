@@ -1,0 +1,32 @@
+package br.edu.ifpb.resteasyapp.entidade;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+@Entity
+@Table(name = "tb_animal")
+@NamedQuery(nome="Animal.getAll", query="from Animal")
+public class Animal {
+	
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.INDENTITY)
+	private int id;
+	
+	private String raca;
+	
+	private String nome;
+	
+	private String tipo;
+	
+	private String sexo;
+	
+	private String pais;
+	
+	private int idade;
+	
+	
+
+}

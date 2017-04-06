@@ -1,0 +1,2008 @@
+Index: app/src/main/res/layout/activity_perfil_fazenda.xml
+===================================================================
+--- app/src/main/res/layout/activity_perfil_fazenda.xml	(revision )
++++ app/src/main/res/layout/activity_perfil_fazenda.xml	(revision )
+@@ -1,93 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    tools:background="@color/backgroundGreen"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context="com.example.sarah.vetapp.Activities.PerfilFazendaActivity">
+-
+-
+-    <android.support.design.widget.FloatingActionButton
+-        android:id="@+id/floatingActionButtonOut"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:clickable="true"
+-        app:fabSize="mini"
+-        app:srcCompat="?attr/actionModeCloseDrawable"
+-        tools:layout_editor_absoluteX="56dp"
+-        tools:layout_editor_absoluteY="611dp" />
+-
+-    <EditText
+-        android:id="@+id/editTextPropriedade"
+-        android:layout_width="341dp"
+-        android:layout_height="44dp"
+-        tools:layout_editor_absoluteX="56dp"
+-        tools:layout_editor_absoluteY="265dp" />
+-
+-    <EditText
+-        android:id="@+id/editTextProprietario"
+-        android:layout_width="341dp"
+-        android:layout_height="44dp"
+-        tools:layout_editor_absoluteX="56dp"
+-        tools:layout_editor_absoluteY="358dp" />
+-
+-    <TextView
+-        android:id="@+id/textViewId"
+-        android:layout_width="341dp"
+-        android:layout_height="22dp"
+-        android:text="@string/name_of_owner"
+-        tools:layout_editor_absoluteX="56dp"
+-        tools:layout_editor_absoluteY="336dp" />
+-    <EditText
+-        android:layout_width="341dp"
+-        android:layout_height="44dp"
+-        tools:layout_editor_absoluteY="164dp"
+-        tools:layout_editor_absoluteX="56dp"
+-        android:id="@+id/editTextID" />
+-
+-    <TextView
+-        android:id="@+id/textViewEmail"
+-        android:layout_width="344dp"
+-        android:layout_height="25dp"
+-        android:text="@string/prompt_email"
+-        tools:layout_editor_absoluteX="56dp"
+-        tools:layout_editor_absoluteY="447dp" />
+-
+-    <TextView
+-        android:id="@+id/textViewPropriedade"
+-        android:layout_width="339dp"
+-        android:layout_height="24dp"
+-        android:text="@string/name_of_farm"
+-        tools:layout_editor_absoluteX="56dp"
+-        tools:layout_editor_absoluteY="241dp" />
+-
+-    <TextView
+-        android:id="@+id/textViewProprietario"
+-        android:layout_width="340dp"
+-        android:layout_height="18dp"
+-        android:text="@string/id"
+-        tools:layout_editor_absoluteX="56dp"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="1.0"
+-        android:layout_marginTop="146dp" />
+-
+-    <EditText
+-        android:id="@+id/editTextEmail"
+-        android:layout_width="344dp"
+-        android:layout_height="43dp"
+-        android:ems="10"
+-        android:inputType="textEmailAddress"
+-        tools:layout_editor_absoluteX="56dp"
+-        tools:layout_editor_absoluteY="472dp" />
+-
+-    <android.support.design.widget.FloatingActionButton
+-        android:id="@+id/floatingActionButton"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:clickable="true"
+-        app:fabSize="mini"
+-        app:srcCompat="@android:drawable/ic_menu_edit"
+-        tools:layout_editor_absoluteX="377dp"
+-        tools:layout_editor_absoluteY="611dp" />
+-</android.support.constraint.ConstraintLayout>
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision )
++++ app/src/main/res/layout/activity_main.xml	(revision )
+@@ -5,49 +5,51 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:background="@color/backgroundGreen"
+-    tools:context="com.example.sarah.vetapp.Activities.MainActivity">
++    tools:context="com.example.sarah.vetapp.MainActivity">
+ 
+     <Button
+         android:id="@+id/fazendas"
+         android:layout_width="match_parent"
+         android:layout_height="62dp"
+-        android:layout_alignParentStart="true"
+-        android:layout_centerVertical="true"
+-        android:background="@android:color/black"
+         android:text="@string/farm"
+         android:textColor="@android:color/background_light"
+         tools:background="@android:color/background_dark"
+         tools:ignore="MissingConstraints"
+         tools:layout_editor_absoluteX="80dp"
+-        tools:layout_editor_absoluteY="227dp" />
++        tools:layout_editor_absoluteY="183dp"
++        android:layout_above="@+id/sair"
++        android:layout_alignParentStart="true"
++        android:layout_marginBottom="228dp" />
+ 
+     <Button
+         android:id="@+id/tarefasMensais"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+-        android:layout_above="@+id/fazendas"
+-        android:layout_alignParentStart="true"
+-        android:layout_marginBottom="86dp"
+-        android:textColor="@android:color/background_light"
+-        tools:background="@android:color/background_dark"
+         android:text="@string/monthly_task"
+         tools:ignore="MissingConstraints"
++        android:textColor="@android:color/background_light"
++        tools:background="@android:color/background_dark"
+         tools:layout_editor_absoluteX="80dp"
+-        tools:layout_editor_absoluteY="183dp" />
++        tools:layout_editor_absoluteY="183dp"
++        android:layout_above="@+id/fazendas"
++        android:layout_alignParentStart="true"
++        android:layout_marginBottom="86dp" />
+ 
+-    <android.support.design.widget.FloatingActionButton
++        <Button
+-        android:id="@+id/sair"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
++            android:id="@+id/sair"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
+-        android:layout_marginBottom="36dp"
+-        app:backgroundTint="@android:color/holo_blue_dark"
+-        app:srcCompat="?attr/actionModeCloseDrawable"
++            android:layout_weight="1"
++            android:text="@string/Exit"
++            android:textColor="@android:color/background_light"
++            tools:background="@android:color/background_dark"
+-        tools:ignore="MissingConstraints"
++            tools:ignore="MissingConstraints"
+-        tools:layout_editor_absoluteX="16dp"
+-        tools:layout_editor_absoluteY="447dp"
++            tools:layout_editor_absoluteX="376dp"
++            tools:layout_editor_absoluteY="655dp"
++            android:layout_marginBottom="84dp"
+-        android:layout_alignParentBottom="true"
+-        android:layout_alignParentEnd="true"
++            android:layout_alignParentBottom="true"
++            android:layout_alignParentEnd="true"
+-        android:layout_marginEnd="42dp" />
++            android:layout_marginEnd="22dp" />
+ 
+ 
+ </android.widget.RelativeLayout>
+Index: app/src/main/res/layout/activity_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_login.xml	(revision )
++++ app/src/main/res/layout/activity_login.xml	(revision )
+@@ -8,8 +8,8 @@
+     android:paddingLeft="@dimen/activity_horizontal_margin"
+     android:paddingRight="@dimen/activity_horizontal_margin"
+     android:paddingTop="@dimen/activity_vertical_margin"
+-    tools:context="com.example.sarah.vetapp.Activities.LoginActivity"
+-    tools:background="@color/backgroundGreen">
++    tools:background="@color/backgroundGreen"
++    tools:context="com.example.sarah.vetapp.LoginActivity">
+ 
+     <!-- Login progress -->
+ 
+@@ -19,17 +19,19 @@
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="8dp"
+-        android:visibility="gone"/>
++        android:visibility="gone" />
+ 
+     <ScrollView
+         android:id="@+id/login_form"
+         android:layout_width="match_parent"
++        tools:background="@color/backgroundGreen"
+         android:layout_height="match_parent">
+ 
+         <LinearLayout
+             android:id="@+id/email_login_form"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
++            tools:background="@color/backgroundGreen"
+             android:orientation="vertical">
+ 
+             <android.support.design.widget.TextInputLayout
+@@ -71,10 +73,10 @@
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="16dp"
+-                android:textColor="@android:color/background_light"
+-                tools:background="@android:color/background_dark"
+                 android:text="@string/action_sign_in"
+-                android:textStyle="bold" />
++                android:textColor="@android:color/white"
++                android:textStyle="bold"
++                tools:background="@android:color/black" />
+ 
+         </LinearLayout>
+     </ScrollView>
+Index: app/src/main/res/layout/activity_listar_fazendas.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_listar_fazendas.xml	(revision )
++++ app/src/main/res/layout/activity_listar_fazendas.xml	(revision )
+@@ -5,14 +5,14 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:background="@color/backgroundGreen"
+-    tools:context="com.example.sarah.vetapp.Activities.ListarFazendasActivity">
++    tools:context="com.example.sarah.vetapp.ListarFazendas">
+ 
+     <android.support.design.widget.FloatingActionButton
+         android:id="@+id/add_fazendas"
+         android:layout_width="47dp"
+         android:layout_height="47dp"
+         android:clickable="true"
+-        android:tint="@android:color/background_dark"
++        android:tint="@android:color/white"
+         app:backgroundTint="@android:color/holo_blue_bright"
+         app:fabSize="mini"
+         app:rippleColor="@android:color/background_dark"
+@@ -46,7 +46,7 @@
+                     android:orientation="vertical" >
+ 
+                     <ListView
+-                        android:id="@+id/listarFazendaListView"
++                        android:id="@+id/listarfazendasListView"
+                         android:layout_width="match_parent"
+                         android:layout_height="726dp"
+                         tools:ignore="MissingConstraints"
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_tarefas_mensais.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_tarefas_mensais.xml	(revision )
++++ app/src/main/res/layout/activity_tarefas_mensais.xml	(revision )
+@@ -4,20 +4,21 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    tools:context="com.example.sarah.vetapp.Activities.TarefasMensaisActivity"
+-    tools:background="@color/backgroundGreen">
++    tools:background="@color/backgroundGreen"
++    tools:context="com.example.sarah.vetapp.TarefasMensais">
+ 
+     <android.support.design.widget.FloatingActionButton
+-        android:id="@+id/buttonSair"
++        android:id="@+id/floatingActionButtonSair"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_alignEnd="@+id/sair"
+-        android:layout_alignParentBottom="true"
+-        app:backgroundTint="@android:color/holo_blue_dark"
++        android:clickable="true"
++        android:tint="@android:color/white"
++        app:backgroundTint="@android:color/holo_blue_bright"
++        app:fabSize="mini"
+         app:srcCompat="?attr/actionModeCloseDrawable"
+-        tools:ignore="MissingConstraints"
+-        tools:layout_editor_absoluteX="406dp"
+-        tools:layout_editor_absoluteY="624dp" />
++        tools:layout_editor_absoluteX="394dp"
++        tools:layout_editor_absoluteY="631dp"
++        tools:ignore="MissingConstraints" />
+ 
+     <ListView
+         android:id="@+id/tarefasMensaisListView"
+Index: app/src/main/res/layout/activity_cadastrar_fazenda.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_cadastrar_fazenda.xml	(revision )
++++ app/src/main/res/layout/activity_cadastrar_fazenda.xml	(revision )
+@@ -3,82 +3,78 @@
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:background="@android:color/holo_green_dark"
+     tools:background="@color/backgroundGreen"
+-    tools:context="com.example.sarah.vetapp.Activities.CadastrarFazendaActivity">
++    android:layout_height="match_parent"
++    tools:context="com.example.sarah.vetapp.CadastrarFazenda">
+ 
+-    <android.support.design.widget.TextInputEditText
++    <AutoCompleteTextView
+         android:id="@+id/nomeFazenda"
+         android:layout_width="352dp"
+         android:layout_height="41dp"
+-        android:layout_alignParentTop="true"
+-        android:layout_alignStart="@+id/nomeProprietario"
+-        android:layout_marginTop="102dp"
+         android:hint="@string/name_of_farm"
+         android:maxLines="1"
+-        android:textColor="@android:color/black"
+-        android:textStyle="bold"
++        android:singleLine="true"
+         tools:ignore="MissingConstraints"
+         tools:layout_editor_absoluteX="16dp"
+         tools:layout_editor_absoluteY="164dp"
+-        tools:textColor="@android:color/black" />
++        android:layout_marginTop="102dp"
++        android:layout_alignParentTop="true"
++        android:layout_alignStart="@+id/nomeProprietario" />
+ 
+-    <android.support.design.widget.TextInputEditText
++    <AutoCompleteTextView
+         android:id="@+id/nomeProprietario"
+         android:layout_width="352dp"
+         android:layout_height="41dp"
+-        android:layout_below="@+id/nomeFazenda"
+-        android:layout_centerHorizontal="true"
+-        android:layout_marginTop="76dp"
+         android:hint="@string/name_of_owner"
+         android:maxLines="1"
+-        android:textStyle="bold"
+         android:singleLine="true"
+         tools:ignore="MissingConstraints"
+         tools:layout_editor_absoluteX="16dp"
+-        tools:layout_editor_absoluteY="235dp" />
++        tools:layout_editor_absoluteY="235dp"
++        android:layout_marginBottom="57dp"
++        android:layout_above="@+id/EmailProprietario"
++        android:layout_centerHorizontal="true" />
+ 
+-    <android.support.design.widget.TextInputEditText
+-        android:id="@+id/emailProprietario"
++    <AutoCompleteTextView
++        android:id="@+id/EmailProprietario"
+         android:layout_width="352dp"
+         android:layout_height="41dp"
+-        android:textStyle="bold"
+-        android:layout_alignStart="@+id/nomeProprietario"
+-        android:layout_centerVertical="true"
+         android:hint="@string/prompt_email"
+         android:maxLines="1"
+         android:singleLine="true"
+-        tools:ignore="MissingConstraints"
+         tools:layout_editor_absoluteX="16dp"
+-        tools:layout_editor_absoluteY="235dp" />
++        tools:layout_editor_absoluteY="235dp"
++        tools:ignore="MissingConstraints"
++        android:layout_centerVertical="true"
++        android:layout_alignStart="@+id/nomeProprietario" />
+ 
+     <Button
+-        android:id="@+id/add_fazenda"
++        android:id="@+id/add_fazenda_email"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginTop="81dp"
+-        android:text="@string/Add"
+         android:textColor="@android:color/background_light"
+         tools:background="@android:color/background_dark"
+-        tools:ignore="MissingConstraints"
+-        tools:layout_editor_absoluteX="290dp"
++        android:text="@string/Add"
+         tools:layout_editor_absoluteY="471dp"
+-        android:layout_below="@+id/emailProprietario"
+-        android:layout_alignStart="@+id/emailProprietario"
+-        android:layout_alignEnd="@+id/emailProprietario" />
++        tools:layout_editor_absoluteX="290dp"
++        tools:ignore="MissingConstraints"
++        android:layout_below="@+id/EmailProprietario"
++        android:layout_marginTop="56dp"
++        android:layout_alignStart="@+id/EmailProprietario"
++        android:layout_alignEnd="@+id/EmailProprietario" />
+ 
+-    <android.support.design.widget.FloatingActionButton
++    <Button
+         android:id="@+id/buttonSair"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginBottom="47dp"
+-        app:backgroundTint="@android:color/holo_blue_dark"
+-        app:srcCompat="?attr/actionModeCloseDrawable"
+-        tools:ignore="MissingConstraints"
++        android:text="@string/Exit"
++        android:textColor="@android:color/background_light"
++        tools:background="@android:color/background_dark"
+         tools:layout_editor_absoluteX="16dp"
+         tools:layout_editor_absoluteY="447dp"
++        tools:ignore="MissingConstraints"
++        android:layout_marginBottom="96dp"
+         android:layout_alignParentBottom="true"
+-        android:layout_alignEnd="@+id/add_fazenda" />
++        android:layout_alignEnd="@+id/add_fazenda_email" />
+ 
+ </android.widget.RelativeLayout>
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision )
++++ app/src/main/res/values/colors.xml	(revision )
+@@ -3,5 +3,5 @@
+     <color name="colorPrimary">#8BC34A</color>
+     <color name="colorPrimaryDark">#689F38</color>
+     <color name="colorAccent">#757575</color>
+-    <color name="backgroundGreen">#b5d1c5</color>
++    <color name="backgroundGreen">#FF78A893</color>
+ </resources>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision )
++++ app/src/main/res/values/strings.xml	(revision )
+@@ -2,7 +2,6 @@
+     <string name="app_name">VETapp</string>
+ 
+     <string name="prompt_email">Email</string>
+-    <string name="id">ID</string>
+     <string name="prompt_password">Senha</string>
+     <string name="action_sign_in">Entrar</string>
+     <string name="action_sign_in_short">Sign in</string>
+@@ -10,9 +9,9 @@
+     <string name="error_invalid_password">This password is too short</string>
+     <string name="error_incorrect_password">This password is incorrect</string>
+     <string name="error_field_required">This field is required</string>
+-    <string name="name_of_farm">Nome da Propriedade</string>
++    <string name="name_of_farm">Nome da Fazenda</string>
+     <string name="farm">Fazenda</string>
+-    <string name="name_of_owner">Nome do Proprietário</string>
++    <string name="name_of_owner">Nome do Proprietário da Fazenda</string>
+     <string name="permission_rationale">"Contacts permissions are needed for providing email
+         completions."
+     </string>
+Index: app/src/main/java/com/example/sarah/vetapp/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/MainActivity.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/MainActivity.java	(revision )
+@@ -0,0 +1,54 @@
++package com.example.sarah.vetapp;
++
++import android.app.Activity;
++import android.content.Intent;
++import android.preference.PreferenceManager;
++import android.provider.Settings;
++import android.support.v7.app.AppCompatActivity;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++
++public class MainActivity extends Activity {
++
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_main);
++        Button bfazendas = (Button) findViewById(R.id.fazendas);
++        bfazendas.setOnClickListener(new View.OnClickListener(){
++            @Override
++            public void onClick(View v) {
++                Intent ilf = new Intent(MainActivity.this, ListarFazendas.class);
++                startActivity(ilf);
++            }
++        });
++        Button btarefasMensais = (Button) findViewById(R.id.tarefasMensais);
++        btarefasMensais.setOnClickListener(new View.OnClickListener(){
++            @Override
++            public void onClick(View v) {
++                Intent itm = new Intent(MainActivity.this, TarefasMensais.class);
++                startActivity(itm);
++            }
++        });
++        Button msair = (Button) findViewById(R.id.sair);
++        msair.setOnClickListener(new View.OnClickListener(){
++            @Override
++            public void onClick(View v) {
++                Intent intent = new Intent(Intent.ACTION_MAIN);
++                intent.addCategory(Intent.CATEGORY_HOME);
++                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
++                startActivity(intent);
++            }
++        });
++    }
++    /*@Override
++    *protected void onResume(){
++    *    if (getIntent().getBooleanExtra("EXIT", false)){
++    *        finish();
++    *   }}
++    */
++
++
++}
+Index: app/src/main/java/com/example/sarah/vetapp/LoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/LoginActivity.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/LoginActivity.java	(revision )
+@@ -0,0 +1,54 @@
++package com.example.sarah.vetapp;
++
++import android.app.Activity;
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.view.View.OnClickListener;
++import android.widget.AutoCompleteTextView;
++import android.widget.Button;
++import android.widget.EditText;
++
++public class LoginActivity extends Activity {
++
++    private AutoCompleteTextView mEmailView;
++    private EditText mPasswordView;
++    private View mProgressView;
++    private View mLoginFormView;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_login);
++        // Set up the login form.
++        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
++        mPasswordView = (EditText) findViewById(R.id.password);
++        final Button mSignInButton = (Button) findViewById(R.id.sign_in_button);
++        mSignInButton.setOnClickListener(new OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                mLoginFormView = findViewById(R.id.login_form);
++                mProgressView = findViewById(R.id.login_progress);
++                mSignInButton.setOnClickListener(new OnClickListener() {
++
++                    @Override
++                    public void onClick(View view) {
++                        // Stores User name
++                        //mudar quando a url for liberada
++                        String username = String.valueOf(mEmailView.getText());
++                        // Stores Password
++                        String password = String.valueOf(mPasswordView.getText());
++                        // Validates the User name and Password for admin, admin
++                        if (username.equals("admin") && password.equals("admin")) {
++                            Intent i = new Intent(LoginActivity.this, MainActivity.class);
++                            startActivity(i);
++                        } else {
++                            mPasswordView.setText("");
++                            mEmailView.setText("");
++                        }
++                    }
++                });
++            }
++        });
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/sarah/vetapp/ListarFazendas.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/ListarFazendas.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/ListarFazendas.java	(revision )
+@@ -0,0 +1,26 @@
++package com.example.sarah.vetapp;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.support.design.widget.FloatingActionButton;
++import android.support.v7.app.AppCompatActivity;
++import android.view.View;
++import android.content.Intent;
++
++
++public class ListarFazendas extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_listar_fazendas);
++        FloatingActionButton maddFazenda = (FloatingActionButton) findViewById(R.id.add_fazendas);
++        maddFazenda.setOnClickListener(new View.OnClickListener(){
++            @Override
++            public void onClick(View v) {
++                Intent i = new Intent(ListarFazendas.this, CadastrarFazenda.class);
++                startActivity(i);
++            }
++        });
++    }
++}
+Index: app/src/main/java/com/example/sarah/vetapp/TarefasMensais.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/TarefasMensais.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/TarefasMensais.java	(revision )
+@@ -0,0 +1,29 @@
++package com.example.sarah.vetapp;
++
++import android.content.Intent;
++import android.support.design.widget.FloatingActionButton;
++import android.support.v7.app.AppCompatActivity;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++
++public class TarefasMensais extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_tarefas_mensais);
++        FloatingActionButton fsair = (FloatingActionButton) findViewById(R.id.floatingActionButtonSair);
++        fsair.setOnClickListener(new View.OnClickListener(){
++            @Override
++            public void onClick(View v) {
++
++                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
++                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
++                intent.putExtra("EXIT", true);
++                startActivity(intent);
++            }
++        });
++    }
++
++}
+Index: app/src/main/java/com/example/sarah/vetapp/CadastrarFazenda.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/CadastrarFazenda.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/CadastrarFazenda.java	(revision )
+@@ -0,0 +1,23 @@
++package com.example.sarah.vetapp;
++
++import android.content.Intent;
++import android.support.v7.app.AppCompatActivity;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++public class CadastrarFazenda extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_cadastrar_fazenda);
++        final Button bsair = (Button) findViewById(R.id.buttonSair);
++        bsair.setOnClickListener(new View.OnClickListener(){
++            @Override
++            public void onClick(View v) {
++                Intent i = new Intent(CadastrarFazenda.this, MainActivity.class);
++                startActivity(i);
++            }
++        });
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/sarah/vetapp/Entity/Fazenda.java
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/Entity/Fazenda.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/Entity/Fazenda.java	(revision )
+@@ -1,57 +0,0 @@
+-package com.example.sarah.vetapp.Entity;
+-
+-public class Fazenda {
+-
+-    private int id;
+-    private String propriedade;
+-    private String proprietario;
+-    private String email;
+-
+-    public Fazenda(String propriedade, String proprietario, String email) {
+-        this.propriedade = propriedade;
+-        this.proprietario = proprietario;
+-        this.email = email;
+-    }
+-
+-    public int getId() {
+-        return id;
+-    }
+-
+-    public void setId(int id) {
+-        this.id = id;
+-    }
+-
+-    public String getPropriedade() {
+-        return propriedade;
+-    }
+-
+-    public void setPropriedade(String propriedade) {
+-        this.propriedade = propriedade;
+-    }
+-
+-    public String getProprietario() {
+-        return proprietario;
+-    }
+-
+-    public void setProprietario(String proprietario) {
+-        this.proprietario = proprietario;
+-    }
+-
+-    public String getEmail() {
+-        return email;
+-    }
+-
+-    public void setEmail(String email) {
+-        this.email = email;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "Fazenda{" +
+-                "id=" + id +
+-                ", propriedade='" + propriedade + '\'' +
+-                ", proprietario='" + proprietario + '\'' +
+-                ", email='" + email + '\'' +
+-                '}';
+-    }
+-}
+Index: app/src/main/java/com/example/sarah/vetapp/Network/APIService.java
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/Network/APIService.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/Network/APIService.java	(revision )
+@@ -1,32 +0,0 @@
+-package com.example.sarah.vetapp.Network;
+-
+-import com.example.sarah.vetapp.Entity.Fazenda;
+-import retrofit2.Call;
+-import retrofit2.http.Body;
+-import retrofit2.http.GET;
+-import retrofit2.http.POST;
+-import retrofit2.http.Path;
+-
+-/**
+- * Created by Sarah on 04/04/2017.
+- */
+-
+-public interface APIService {
+-
+-
+-    @GET("fazenda/id/{id}")
+-    Call<Fazenda> inserirFazenda(@Path("id") int id);
+-
+-    @GET("fazenda/listar")
+-     Call<Fazenda> getFazendas();
+-
+-    @POST("fazenda/inserir")
+-    Call<Fazenda> inserirFazenda(@Body Fazenda fazenda);
+-
+-    @POST("fazenda/deletar")
+-    Call<Fazenda> deletarFazenda(@Body Fazenda fazenda);
+-
+-    @POST("fazenda/alterar")
+-    Call<Fazenda> alterarFazenda(@Body Fazenda fazenda);
+-
+-}
+Index: app/src/main/java/com/example/sarah/vetapp/Network/ConnectionServer.java
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/Network/ConnectionServer.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/Network/ConnectionServer.java	(revision )
+@@ -1,41 +0,0 @@
+-package com.example.sarah.vetapp.Network;
+-
+-/**
+- * Created by Sarah on 04/04/2017.
+- */
+-
+-import retrofit2.converter.gson.GsonConverterFactory;
+-import retrofit2.Retrofit;
+-
+-public class ConnectionServer {
+-
+-   private static final String URL_BASES = "http://localhost:8080/RestEasyApp/";
+-
+-
+-    private static APIService service;
+-    private static ConnectionServer ourInstance = new ConnectionServer();
+-
+-    public static ConnectionServer getInstance() {
+-       return ourInstance;
+-    }
+-
+-    public APIService getService() {
+-        return service;
+-    }
+-
+-    private ConnectionServer() {
+-        updateServiceAdress();
+-    }
+-
+-    public void updateServiceAdress() {
+-
+-
+-
+-        Retrofit retrofit = new Retrofit.Builder()
+-                .baseUrl(URL_BASES)
+-                .addConverterFactory(GsonConverterFactory.create())
+-                .build();
+-
+-        service = retrofit.create(APIService.class);
+-    }
+-}
+Index: app/src/main/java/com/example/sarah/vetapp/Activities/MainActivity.java
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/Activities/MainActivity.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/Activities/MainActivity.java	(revision )
+@@ -1,53 +0,0 @@
+-package com.example.sarah.vetapp.Activities;
+-
+-import android.app.Activity;
+-import android.content.Intent;
+-import android.os.Bundle;
+-import android.view.View;
+-import android.widget.Button;
+-
+-import com.example.sarah.vetapp.R;
+-
+-public class MainActivity extends Activity {
+-
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_main);
+-        Button bfazendas = (Button) findViewById(R.id.fazendas);
+-        bfazendas.setOnClickListener(new View.OnClickListener(){
+-            @Override
+-            public void onClick(View v) {
+-                Intent ilf = new Intent(MainActivity.this, ListarFazendasActivity.class);
+-                startActivity(ilf);
+-            }
+-        });
+-        Button btarefasMensais = (Button) findViewById(R.id.tarefasMensais);
+-        btarefasMensais.setOnClickListener(new View.OnClickListener(){
+-            @Override
+-            public void onClick(View v) {
+-                Intent itm = new Intent(MainActivity.this, TarefasMensaisActivity.class);
+-                startActivity(itm);
+-            }
+-        });
+-        Button msair = (Button) findViewById(R.id.sair);
+-        msair.setOnClickListener(new View.OnClickListener(){
+-            @Override
+-            public void onClick(View v) {
+-                Intent intent = new Intent(Intent.ACTION_MAIN);
+-                intent.addCategory(Intent.CATEGORY_HOME);
+-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+-                startActivity(intent);
+-            }
+-        });
+-    }
+-    /*@Override
+-    *protected void onResume(){
+-    *    if (getIntent().getBooleanExtra("EXIT", false)){
+-    *        finish();
+-    *   }}
+-    */
+-
+-
+-}
+Index: app/src/main/java/com/example/sarah/vetapp/Activities/LoginActivity.java
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/Activities/LoginActivity.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/Activities/LoginActivity.java	(revision )
+@@ -1,56 +0,0 @@
+-package com.example.sarah.vetapp.Activities;
+-
+-import android.app.Activity;
+-import android.content.Intent;
+-import android.os.Bundle;
+-import android.view.View;
+-import android.view.View.OnClickListener;
+-import android.widget.AutoCompleteTextView;
+-import android.widget.Button;
+-import android.widget.EditText;
+-
+-import com.example.sarah.vetapp.R;
+-
+-public class LoginActivity extends Activity {
+-
+-    private AutoCompleteTextView mEmailView;
+-    private EditText mPasswordView;
+-    private View mProgressView = findViewById(R.id.login_progress);
+-    private View mLoginFormView = findViewById(R.id.login_form);
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_login);
+-        // Set up the login form.
+-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+-        mPasswordView = (EditText) findViewById(R.id.password);
+-        final Button mSignInButton = (Button) findViewById(R.id.sign_in_button);
+-        mSignInButton.setOnClickListener(new OnClickListener() {
+-            @Override
+-            public void onClick(View view) {
+-                mSignInButton.setOnClickListener(new OnClickListener() {
+-
+-                    @Override
+-                    public void onClick(View view) {
+-                        // Stores User name
+-                        //mudar quando a url for liberada
+-                        String username = String.valueOf(mEmailView.getText());
+-                        // Stores Password
+-                        String password = String.valueOf(mPasswordView.getText());
+-
+-                        // Validates the User name and Password for admin, admin
+-
+-                        if (username.equals("admin") && password.equals("admin")){
+-                            Intent i = new Intent(LoginActivity.this, MainActivity.class);
+-                            startActivity(i);
+-                        } else {
+-                            mPasswordView.setText("");
+-                            mEmailView.setText("");
+-                        }
+-                    }
+-                });
+-            }
+-        });
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/sarah/vetapp/Activities/PerfilFazendaActivity.java
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/Activities/PerfilFazendaActivity.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/Activities/PerfilFazendaActivity.java	(revision )
+@@ -1,29 +0,0 @@
+-package com.example.sarah.vetapp.Activities;
+-
+-import android.app.Activity;
+-import android.content.Intent;
+-import android.support.design.widget.FloatingActionButton;
+-import android.support.v7.app.AppCompatActivity;
+-import android.os.Bundle;
+-import android.view.View;
+-
+-import com.example.sarah.vetapp.R;
+-
+-public class PerfilFazendaActivity extends Activity {
+-
+-
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_perfil_fazenda);
+-        FloatingActionButton sair = (FloatingActionButton) findViewById(R.id.floatingActionButtonOut);
+-        sair.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                Intent itm = new Intent(PerfilFazendaActivity.this, MainActivity.class);
+-                startActivity(itm);
+-            }
+-        });
+-    }
+-}
+Index: app/src/main/java/com/example/sarah/vetapp/Activities/ListarFazendasActivity.java
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/Activities/ListarFazendasActivity.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/Activities/ListarFazendasActivity.java	(revision )
+@@ -1,37 +0,0 @@
+-package com.example.sarah.vetapp.Activities;
+-
+-import android.content.Intent;
+-import android.os.Bundle;
+-import android.support.design.widget.FloatingActionButton;
+-import android.support.v7.app.AppCompatActivity;
+-import android.view.View;
+-import android.widget.AdapterView;
+-import android.widget.ListView;
+-
+-import com.example.sarah.vetapp.R;
+-
+-
+-public class ListarFazendasActivity extends AppCompatActivity {
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_listar_fazendas);
+-        FloatingActionButton maddFazenda = (FloatingActionButton) findViewById(R.id.add_fazendas);
+-        maddFazenda.setOnClickListener(new View.OnClickListener(){
+-            @Override
+-            public void onClick(View v) {
+-                Intent i = new Intent(ListarFazendasActivity.this, CadastrarFazendaActivity.class);
+-                startActivity(i);
+-            }
+-        });
+-       ListView lvfazenda = (ListView) findViewById(R.id.listarFazendaListView);
+-       lvfazenda.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+-          @Override
+-         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+-            Intent intent = new Intent(ListarFazendasActivity.this, PerfilFazendaActivity.class);
+-           startActivity(intent);
+-       }
+-       });
+-    }
+-}
+Index: app/src/main/java/com/example/sarah/vetapp/Activities/TarefasMensaisActivity.java
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/Activities/TarefasMensaisActivity.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/Activities/TarefasMensaisActivity.java	(revision )
+@@ -1,30 +0,0 @@
+-package com.example.sarah.vetapp.Activities;
+-
+-import android.content.Intent;
+-import android.support.design.widget.FloatingActionButton;
+-import android.support.v7.app.AppCompatActivity;
+-import android.os.Bundle;
+-import android.view.View;
+-
+-import com.example.sarah.vetapp.R;
+-
+-public class TarefasMensaisActivity extends AppCompatActivity {
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_tarefas_mensais);
+-        FloatingActionButton fsair = (FloatingActionButton) findViewById(R.id.buttonSair);
+-        fsair.setOnClickListener(new View.OnClickListener(){
+-            @Override
+-            public void onClick(View v) {
+-
+-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+-                intent.putExtra("EXIT", true);
+-                startActivity(intent);
+-            }
+-        });
+-    }
+-
+-}
+Index: app/src/main/java/com/example/sarah/vetapp/Activities/CadastrarFazendaActivity.java
+===================================================================
+--- app/src/main/java/com/example/sarah/vetapp/Activities/CadastrarFazendaActivity.java	(revision )
++++ app/src/main/java/com/example/sarah/vetapp/Activities/CadastrarFazendaActivity.java	(revision )
+@@ -1,55 +0,0 @@
+-package com.example.sarah.vetapp.Activities;
+-
+-import android.app.Activity;
+-import android.content.Intent;
+-import android.os.Bundle;
+-import android.view.View;
+-import android.widget.Button;
+-import android.widget.EditText;
+-
+-import com.example.sarah.vetapp.Entity.Fazenda;
+-import com.example.sarah.vetapp.R;
+-
+-public class CadastrarFazendaActivity extends Activity {
+-
+-    private EditText propriedade;
+-    private EditText proprietario;
+-    private EditText emailProprietario;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_cadastrar_fazenda);
+-        propriedade = (EditText) findViewById(R.id.nomeFazenda);
+-        proprietario = (EditText) findViewById(R.id.nomeProprietario);
+-        emailProprietario = (EditText) findViewById(R.id.emailProprietario);
+-        Button bsair = (Button) findViewById(R.id.buttonSair);
+-        bsair.setOnClickListener(new View.OnClickListener(){
+-
+-            @Override
+-            public void onClick(View v) {
+-
+-                Intent i = new Intent(CadastrarFazendaActivity.this, MainActivity.class);
+-                startActivity(i);
+-            }
+-        });
+-
+-        Button badd = (Button) findViewById(R.id.add_fazenda);
+-        badd.setOnClickListener(new View.OnClickListener(){
+-            @Override
+-            public void onClick(View v){
+-
+-                String proprieta = proprietario.toString();
+-                String proprieda = propriedade.toString();
+-                String email = emailProprietario.toString();
+-                Fazenda fazenda = new Fazenda(proprieda,proprieta,email);
+-
+-            }
+-        });
+-
+-    }
+-
+-
+-
+-}
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision )
++++ app/src/main/AndroidManifest.xml	(revision )
+@@ -9,18 +9,16 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/AppTheme">
+-        <activity android:name=".Activities.LoginActivity">
++        <activity android:name=".LoginActivity">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+-
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
+-        <activity android:name=".Activities.MainActivity" />
+-        <activity android:name=".Activities.ListarFazendasActivity" />
+-        <activity android:name=".Activities.TarefasMensaisActivity" />
+-        <activity android:name=".Activities.CadastrarFazendaActivity" />
+-        <activity android:name=".Activities.PerfilFazendaActivity"></activity>
++        <activity android:name=".MainActivity"/>
++        <activity android:name=".ListarFazendas" />
++        <activity android:name=".TarefasMensais" />
++        <activity android:name=".CadastrarFazenda"></activity>
+     </application>
+ 
+ </manifest>
+\ No newline at end of file
+Index: app/build/generated/source/r/debug/com/example/sarah/vetapp/R.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build/generated/source/r/debug/com/example/sarah/vetapp/R.java	(revision )
++++ app/build/generated/source/r/debug/com/example/sarah/vetapp/R.java	(revision )
+@@ -3112,8 +3112,9 @@
+         public static final int task=0x7f020067;
+     }
+     public static final class id {
++        public static final int EmailProprietario=0x7f0d007c;
+         public static final int ScrollView=0x7f0d0080;
+-        public static final int action0=0x7f0d00a6;
++        public static final int action0=0x7f0d009d;
+         public static final int action_bar=0x7f0d006b;
+         public static final int action_bar_activity_content=0x7f0d0000;
+         public static final int action_bar_container=0x7f0d006a;
+@@ -3121,20 +3122,20 @@
+         public static final int action_bar_spinner=0x7f0d0001;
+         public static final int action_bar_subtitle=0x7f0d0049;
+         public static final int action_bar_title=0x7f0d0048;
+-        public static final int action_container=0x7f0d00a3;
++        public static final int action_container=0x7f0d009a;
+         public static final int action_context_bar=0x7f0d006c;
+-        public static final int action_divider=0x7f0d00aa;
+-        public static final int action_image=0x7f0d00a4;
++        public static final int action_divider=0x7f0d00a1;
++        public static final int action_image=0x7f0d009b;
+         public static final int action_menu_divider=0x7f0d0002;
+         public static final int action_menu_presenter=0x7f0d0003;
+         public static final int action_mode_bar=0x7f0d0068;
+         public static final int action_mode_bar_stub=0x7f0d0067;
+         public static final int action_mode_close_button=0x7f0d004a;
+-        public static final int action_text=0x7f0d00a5;
+-        public static final int actions=0x7f0d00b2;
++        public static final int action_text=0x7f0d009c;
++        public static final int actions=0x7f0d00a9;
+         public static final int activity_chooser_view_content=0x7f0d004b;
+         public static final int add=0x7f0d0026;
+-        public static final int add_fazenda=0x7f0d007d;
++        public static final int add_fazenda_email=0x7f0d007d;
+         public static final int add_fazendas=0x7f0d007f;
+         public static final int alertTitle=0x7f0d005f;
+         public static final int all=0x7f0d0014;
+@@ -3145,13 +3146,13 @@
+         public static final int bottom=0x7f0d002e;
+         public static final int buttonPanel=0x7f0d0052;
+         public static final int buttonSair=0x7f0d007e;
+-        public static final int cancel_action=0x7f0d00a7;
++        public static final int cancel_action=0x7f0d009e;
+         public static final int center=0x7f0d002f;
+         public static final int center_horizontal=0x7f0d0030;
+         public static final int center_vertical=0x7f0d0031;
+         public static final int chains=0x7f0d0016;
+         public static final int checkbox=0x7f0d0062;
+-        public static final int chronometer=0x7f0d00af;
++        public static final int chronometer=0x7f0d00a6;
+         public static final int clip_horizontal=0x7f0d003a;
+         public static final int clip_vertical=0x7f0d003b;
+         public static final int collapseActionView=0x7f0d0042;
+@@ -3160,22 +3161,17 @@
+         public static final int customPanel=0x7f0d005b;
+         public static final int decor_content_parent=0x7f0d0069;
+         public static final int default_activity_button=0x7f0d004e;
+-        public static final int design_bottom_sheet=0x7f0d009a;
+-        public static final int design_menu_item_action_area=0x7f0d00a1;
+-        public static final int design_menu_item_action_area_stub=0x7f0d00a0;
+-        public static final int design_menu_item_text=0x7f0d009f;
+-        public static final int design_navigation_view=0x7f0d009e;
++        public static final int design_bottom_sheet=0x7f0d0091;
++        public static final int design_menu_item_action_area=0x7f0d0098;
++        public static final int design_menu_item_action_area_stub=0x7f0d0097;
++        public static final int design_menu_item_text=0x7f0d0096;
++        public static final int design_navigation_view=0x7f0d0095;
+         public static final int disableHome=0x7f0d001b;
+-        public static final int editTextEmail=0x7f0d0094;
+-        public static final int editTextID=0x7f0d0090;
+-        public static final int editTextPropriedade=0x7f0d008d;
+-        public static final int editTextProprietario=0x7f0d008e;
+         public static final int edit_query=0x7f0d006d;
+         public static final int email=0x7f0d0085;
+-        public static final int emailProprietario=0x7f0d007c;
+         public static final int email_login_form=0x7f0d0084;
+         public static final int end=0x7f0d0032;
+-        public static final int end_padder=0x7f0d00b9;
++        public static final int end_padder=0x7f0d00b0;
+         public static final int enterAlways=0x7f0d0021;
+         public static final int enterAlwaysCollapsed=0x7f0d0022;
+         public static final int exitUntilCollapsed=0x7f0d0023;
+@@ -3186,40 +3182,39 @@
+         public static final int fill_horizontal=0x7f0d003d;
+         public static final int fill_vertical=0x7f0d0033;
+         public static final int fixed=0x7f0d0046;
+-        public static final int floatingActionButton=0x7f0d0095;
+-        public static final int floatingActionButtonOut=0x7f0d008c;
++        public static final int floatingActionButtonSair=0x7f0d008c;
+         public static final int home=0x7f0d0004;
+         public static final int homeAsUp=0x7f0d001c;
+         public static final int icon=0x7f0d0050;
+-        public static final int icon_group=0x7f0d00b3;
++        public static final int icon_group=0x7f0d00aa;
+         public static final int ifRoom=0x7f0d0043;
+         public static final int image=0x7f0d004d;
+-        public static final int info=0x7f0d00b0;
++        public static final int info=0x7f0d00a7;
+         public static final int item_touch_helper_previous_elevation=0x7f0d0005;
+-        public static final int largeLabel=0x7f0d0098;
++        public static final int largeLabel=0x7f0d008f;
+         public static final int left=0x7f0d0034;
+-        public static final int line1=0x7f0d00b5;
+-        public static final int line3=0x7f0d00b7;
++        public static final int line1=0x7f0d00ac;
++        public static final int line3=0x7f0d00ae;
+         public static final int listMode=0x7f0d0018;
+         public static final int list_item=0x7f0d004f;
+-        public static final int listarFazendaListView=0x7f0d0081;
++        public static final int listarfazendasListView=0x7f0d0081;
+         public static final int login=0x7f0d0087;
+         public static final int login_form=0x7f0d0083;
+         public static final int login_progress=0x7f0d0082;
+-        public static final int masked=0x7f0d00bb;
+-        public static final int media_actions=0x7f0d00a9;
++        public static final int masked=0x7f0d00b2;
++        public static final int media_actions=0x7f0d00a0;
+         public static final int middle=0x7f0d0040;
+         public static final int mini=0x7f0d003e;
+         public static final int multiply=0x7f0d0027;
+-        public static final int navigation_header_container=0x7f0d009d;
++        public static final int navigation_header_container=0x7f0d0094;
+         public static final int never=0x7f0d0044;
+         public static final int nomeFazenda=0x7f0d007a;
+         public static final int nomeProprietario=0x7f0d007b;
+         public static final int none=0x7f0d0017;
+         public static final int normal=0x7f0d0019;
+-        public static final int notification_background=0x7f0d00b1;
+-        public static final int notification_main_column=0x7f0d00ac;
+-        public static final int notification_main_column_container=0x7f0d00ab;
++        public static final int notification_background=0x7f0d00a8;
++        public static final int notification_main_column=0x7f0d00a3;
++        public static final int notification_main_column_container=0x7f0d00a2;
+         public static final int packed=0x7f0d0012;
+         public static final int parallax=0x7f0d0038;
+         public static final int parent=0x7f0d000f;
+@@ -3230,9 +3225,9 @@
+         public static final int progress_horizontal=0x7f0d0007;
+         public static final int radio=0x7f0d0064;
+         public static final int right=0x7f0d0035;
+-        public static final int right_icon=0x7f0d00b4;
+-        public static final int right_side=0x7f0d00ad;
+-        public static final int sair=0x7f0d008b;
++        public static final int right_icon=0x7f0d00ab;
++        public static final int right_side=0x7f0d00a4;
++        public static final int sair=0x7f0d008a;
+         public static final int screen=0x7f0d0028;
+         public static final int scroll=0x7f0d0024;
+         public static final int scrollIndicatorDown=0x7f0d005a;
+@@ -3255,9 +3250,9 @@
+         public static final int showHome=0x7f0d001e;
+         public static final int showTitle=0x7f0d001f;
+         public static final int sign_in_button=0x7f0d0088;
+-        public static final int smallLabel=0x7f0d0097;
+-        public static final int snackbar_action=0x7f0d009c;
+-        public static final int snackbar_text=0x7f0d009b;
++        public static final int smallLabel=0x7f0d008e;
++        public static final int snackbar_action=0x7f0d0093;
++        public static final int snackbar_text=0x7f0d0092;
+         public static final int snap=0x7f0d0025;
+         public static final int spacer=0x7f0d0053;
+         public static final int split_action_bar=0x7f0d0008;
+@@ -3267,36 +3262,32 @@
+         public static final int src_in=0x7f0d002a;
+         public static final int src_over=0x7f0d002b;
+         public static final int start=0x7f0d0036;
+-        public static final int status_bar_latest_event_content=0x7f0d00a8;
++        public static final int status_bar_latest_event_content=0x7f0d009f;
+         public static final int submenuarrow=0x7f0d0065;
+         public static final int submit_area=0x7f0d0076;
+         public static final int tabMode=0x7f0d001a;
+-        public static final int tarefasMensais=0x7f0d008a;
+-        public static final int tarefasMensaisListView=0x7f0d0096;
+-        public static final int text=0x7f0d00b8;
+-        public static final int text2=0x7f0d00b6;
++        public static final int tarefasMensais=0x7f0d008b;
++        public static final int tarefasMensaisListView=0x7f0d008d;
++        public static final int text=0x7f0d00af;
++        public static final int text2=0x7f0d00ad;
+         public static final int textSpacerNoButtons=0x7f0d0059;
+         public static final int textSpacerNoTitle=0x7f0d0058;
+-        public static final int textViewEmail=0x7f0d0091;
+-        public static final int textViewId=0x7f0d008f;
+-        public static final int textViewPropriedade=0x7f0d0092;
+-        public static final int textViewProprietario=0x7f0d0093;
+-        public static final int text_input_password_toggle=0x7f0d00a2;
++        public static final int text_input_password_toggle=0x7f0d0099;
+         public static final int textinput_counter=0x7f0d0009;
+         public static final int textinput_error=0x7f0d000a;
+-        public static final int time=0x7f0d00ae;
++        public static final int time=0x7f0d00a5;
+         public static final int title=0x7f0d0051;
+         public static final int titleDividerNoCustom=0x7f0d0060;
+         public static final int title_template=0x7f0d005e;
+         public static final int top=0x7f0d0037;
+         public static final int topPanel=0x7f0d005d;
+-        public static final int touch_outside=0x7f0d0099;
++        public static final int touch_outside=0x7f0d0090;
+         public static final int transition_current_scene=0x7f0d000b;
+         public static final int transition_scene_layoutid_cache=0x7f0d000c;
+         public static final int up=0x7f0d000d;
+         public static final int useLogo=0x7f0d0020;
+         public static final int view_offset_helper=0x7f0d000e;
+-        public static final int visible=0x7f0d00ba;
++        public static final int visible=0x7f0d00b1;
+         public static final int withText=0x7f0d0045;
+         public static final int wrap=0x7f0d0011;
+         public static final int wrap_content=0x7f0d002c;
+@@ -3344,41 +3335,40 @@
+         public static final int activity_listar_fazendas=0x7f04001c;
+         public static final int activity_login=0x7f04001d;
+         public static final int activity_main=0x7f04001e;
+-        public static final int activity_perfil_fazenda=0x7f04001f;
+-        public static final int activity_tarefas_mensais=0x7f040020;
+-        public static final int design_bottom_navigation_item=0x7f040021;
+-        public static final int design_bottom_sheet_dialog=0x7f040022;
+-        public static final int design_layout_snackbar=0x7f040023;
+-        public static final int design_layout_snackbar_include=0x7f040024;
+-        public static final int design_layout_tab_icon=0x7f040025;
+-        public static final int design_layout_tab_text=0x7f040026;
+-        public static final int design_menu_item_action_area=0x7f040027;
+-        public static final int design_navigation_item=0x7f040028;
+-        public static final int design_navigation_item_header=0x7f040029;
+-        public static final int design_navigation_item_separator=0x7f04002a;
+-        public static final int design_navigation_item_subheader=0x7f04002b;
+-        public static final int design_navigation_menu=0x7f04002c;
+-        public static final int design_navigation_menu_item=0x7f04002d;
+-        public static final int design_text_input_password_icon=0x7f04002e;
+-        public static final int notification_action=0x7f04002f;
+-        public static final int notification_action_tombstone=0x7f040030;
+-        public static final int notification_media_action=0x7f040031;
+-        public static final int notification_media_cancel_action=0x7f040032;
+-        public static final int notification_template_big_media=0x7f040033;
+-        public static final int notification_template_big_media_custom=0x7f040034;
+-        public static final int notification_template_big_media_narrow=0x7f040035;
+-        public static final int notification_template_big_media_narrow_custom=0x7f040036;
+-        public static final int notification_template_custom_big=0x7f040037;
+-        public static final int notification_template_icon_group=0x7f040038;
+-        public static final int notification_template_lines_media=0x7f040039;
+-        public static final int notification_template_media=0x7f04003a;
+-        public static final int notification_template_media_custom=0x7f04003b;
+-        public static final int notification_template_part_chronometer=0x7f04003c;
+-        public static final int notification_template_part_time=0x7f04003d;
+-        public static final int select_dialog_item_material=0x7f04003e;
+-        public static final int select_dialog_multichoice_material=0x7f04003f;
+-        public static final int select_dialog_singlechoice_material=0x7f040040;
+-        public static final int support_simple_spinner_dropdown_item=0x7f040041;
++        public static final int activity_tarefas_mensais=0x7f04001f;
++        public static final int design_bottom_navigation_item=0x7f040020;
++        public static final int design_bottom_sheet_dialog=0x7f040021;
++        public static final int design_layout_snackbar=0x7f040022;
++        public static final int design_layout_snackbar_include=0x7f040023;
++        public static final int design_layout_tab_icon=0x7f040024;
++        public static final int design_layout_tab_text=0x7f040025;
++        public static final int design_menu_item_action_area=0x7f040026;
++        public static final int design_navigation_item=0x7f040027;
++        public static final int design_navigation_item_header=0x7f040028;
++        public static final int design_navigation_item_separator=0x7f040029;
++        public static final int design_navigation_item_subheader=0x7f04002a;
++        public static final int design_navigation_menu=0x7f04002b;
++        public static final int design_navigation_menu_item=0x7f04002c;
++        public static final int design_text_input_password_icon=0x7f04002d;
++        public static final int notification_action=0x7f04002e;
++        public static final int notification_action_tombstone=0x7f04002f;
++        public static final int notification_media_action=0x7f040030;
++        public static final int notification_media_cancel_action=0x7f040031;
++        public static final int notification_template_big_media=0x7f040032;
++        public static final int notification_template_big_media_custom=0x7f040033;
++        public static final int notification_template_big_media_narrow=0x7f040034;
++        public static final int notification_template_big_media_narrow_custom=0x7f040035;
++        public static final int notification_template_custom_big=0x7f040036;
++        public static final int notification_template_icon_group=0x7f040037;
++        public static final int notification_template_lines_media=0x7f040038;
++        public static final int notification_template_media=0x7f040039;
++        public static final int notification_template_media_custom=0x7f04003a;
++        public static final int notification_template_part_chronometer=0x7f04003b;
++        public static final int notification_template_part_time=0x7f04003c;
++        public static final int select_dialog_item_material=0x7f04003d;
++        public static final int select_dialog_multichoice_material=0x7f04003e;
++        public static final int select_dialog_singlechoice_material=0x7f04003f;
++        public static final int support_simple_spinner_dropdown_item=0x7f040040;
+     }
+     public static final class mipmap {
+         public static final int ic_launcher=0x7f030000;
+@@ -3429,21 +3419,20 @@
+         public static final int error_invalid_email=0x7f07002b;
+         public static final int error_invalid_password=0x7f07002c;
+         public static final int farm=0x7f07002d;
+-        public static final int id=0x7f07002e;
+-        public static final int monthly_task=0x7f07002f;
+-        public static final int name_of_farm=0x7f070030;
+-        public static final int name_of_owner=0x7f070031;
+-        public static final int password_toggle_content_description=0x7f070032;
+-        public static final int path_password_eye=0x7f070033;
+-        public static final int path_password_eye_mask_strike_through=0x7f070034;
+-        public static final int path_password_eye_mask_visible=0x7f070035;
+-        public static final int path_password_strike_through=0x7f070036;
+-        public static final int permission_rationale=0x7f070037;
+-        public static final int prompt_email=0x7f070038;
+-        public static final int prompt_password=0x7f070039;
++        public static final int monthly_task=0x7f07002e;
++        public static final int name_of_farm=0x7f07002f;
++        public static final int name_of_owner=0x7f070030;
++        public static final int password_toggle_content_description=0x7f070031;
++        public static final int path_password_eye=0x7f070032;
++        public static final int path_password_eye_mask_strike_through=0x7f070033;
++        public static final int path_password_eye_mask_visible=0x7f070034;
++        public static final int path_password_strike_through=0x7f070035;
++        public static final int permission_rationale=0x7f070036;
++        public static final int prompt_email=0x7f070037;
++        public static final int prompt_password=0x7f070038;
+         public static final int search_menu_title=0x7f070013;
+         public static final int status_bar_notification_info_overflow=0x7f070014;
+-        public static final int title_activity_listar_fazendas=0x7f07003a;
++        public static final int title_activity_listar_fazendas=0x7f070039;
+     }
+     public static final class style {
+         public static final int AlertDialog_AppCompat=0x7f0900a1;
+Index: app/build/generated/source/r/debug/android/support/v7/appcompat/R.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build/generated/source/r/debug/android/support/v7/appcompat/R.java	(revision )
++++ app/build/generated/source/r/debug/android/support/v7/appcompat/R.java	(revision )
+@@ -538,7 +538,7 @@
+         public static final int notify_panel_notification_icon_bg = 0x7f020066;
+     }
+     public static final class id {
+-        public static final int action0 = 0x7f0d00a6;
++        public static final int action0 = 0x7f0d009d;
+         public static final int action_bar = 0x7f0d006b;
+         public static final int action_bar_activity_content = 0x7f0d0000;
+         public static final int action_bar_container = 0x7f0d006a;
+@@ -546,17 +546,17 @@
+         public static final int action_bar_spinner = 0x7f0d0001;
+         public static final int action_bar_subtitle = 0x7f0d0049;
+         public static final int action_bar_title = 0x7f0d0048;
+-        public static final int action_container = 0x7f0d00a3;
++        public static final int action_container = 0x7f0d009a;
+         public static final int action_context_bar = 0x7f0d006c;
+-        public static final int action_divider = 0x7f0d00aa;
+-        public static final int action_image = 0x7f0d00a4;
++        public static final int action_divider = 0x7f0d00a1;
++        public static final int action_image = 0x7f0d009b;
+         public static final int action_menu_divider = 0x7f0d0002;
+         public static final int action_menu_presenter = 0x7f0d0003;
+         public static final int action_mode_bar = 0x7f0d0068;
+         public static final int action_mode_bar_stub = 0x7f0d0067;
+         public static final int action_mode_close_button = 0x7f0d004a;
+-        public static final int action_text = 0x7f0d00a5;
+-        public static final int actions = 0x7f0d00b2;
++        public static final int action_text = 0x7f0d009c;
++        public static final int actions = 0x7f0d00a9;
+         public static final int activity_chooser_view_content = 0x7f0d004b;
+         public static final int add = 0x7f0d0026;
+         public static final int alertTitle = 0x7f0d005f;
+@@ -564,9 +564,9 @@
+         public static final int beginning = 0x7f0d003f;
+         public static final int bottom = 0x7f0d002e;
+         public static final int buttonPanel = 0x7f0d0052;
+-        public static final int cancel_action = 0x7f0d00a7;
++        public static final int cancel_action = 0x7f0d009e;
+         public static final int checkbox = 0x7f0d0062;
+-        public static final int chronometer = 0x7f0d00af;
++        public static final int chronometer = 0x7f0d00a6;
+         public static final int collapseActionView = 0x7f0d0042;
+         public static final int contentPanel = 0x7f0d0055;
+         public static final int custom = 0x7f0d005c;
+@@ -576,35 +576,35 @@
+         public static final int disableHome = 0x7f0d001b;
+         public static final int edit_query = 0x7f0d006d;
+         public static final int end = 0x7f0d0032;
+-        public static final int end_padder = 0x7f0d00b9;
++        public static final int end_padder = 0x7f0d00b0;
+         public static final int expand_activities_button = 0x7f0d004c;
+         public static final int expanded_menu = 0x7f0d0061;
+         public static final int home = 0x7f0d0004;
+         public static final int homeAsUp = 0x7f0d001c;
+         public static final int icon = 0x7f0d0050;
+-        public static final int icon_group = 0x7f0d00b3;
++        public static final int icon_group = 0x7f0d00aa;
+         public static final int ifRoom = 0x7f0d0043;
+         public static final int image = 0x7f0d004d;
+-        public static final int info = 0x7f0d00b0;
+-        public static final int line1 = 0x7f0d00b5;
+-        public static final int line3 = 0x7f0d00b7;
++        public static final int info = 0x7f0d00a7;
++        public static final int line1 = 0x7f0d00ac;
++        public static final int line3 = 0x7f0d00ae;
+         public static final int listMode = 0x7f0d0018;
+         public static final int list_item = 0x7f0d004f;
+-        public static final int media_actions = 0x7f0d00a9;
++        public static final int media_actions = 0x7f0d00a0;
+         public static final int middle = 0x7f0d0040;
+         public static final int multiply = 0x7f0d0027;
+         public static final int never = 0x7f0d0044;
+         public static final int none = 0x7f0d0017;
+         public static final int normal = 0x7f0d0019;
+-        public static final int notification_background = 0x7f0d00b1;
+-        public static final int notification_main_column = 0x7f0d00ac;
+-        public static final int notification_main_column_container = 0x7f0d00ab;
++        public static final int notification_background = 0x7f0d00a8;
++        public static final int notification_main_column = 0x7f0d00a3;
++        public static final int notification_main_column_container = 0x7f0d00a2;
+         public static final int parentPanel = 0x7f0d0054;
+         public static final int progress_circular = 0x7f0d0006;
+         public static final int progress_horizontal = 0x7f0d0007;
+         public static final int radio = 0x7f0d0064;
+-        public static final int right_icon = 0x7f0d00b4;
+-        public static final int right_side = 0x7f0d00ad;
++        public static final int right_icon = 0x7f0d00ab;
++        public static final int right_side = 0x7f0d00a4;
+         public static final int screen = 0x7f0d0028;
+         public static final int scrollIndicatorDown = 0x7f0d005a;
+         public static final int scrollIndicatorUp = 0x7f0d0056;
+@@ -629,15 +629,15 @@
+         public static final int src_atop = 0x7f0d0029;
+         public static final int src_in = 0x7f0d002a;
+         public static final int src_over = 0x7f0d002b;
+-        public static final int status_bar_latest_event_content = 0x7f0d00a8;
++        public static final int status_bar_latest_event_content = 0x7f0d009f;
+         public static final int submenuarrow = 0x7f0d0065;
+         public static final int submit_area = 0x7f0d0076;
+         public static final int tabMode = 0x7f0d001a;
+-        public static final int text = 0x7f0d00b8;
+-        public static final int text2 = 0x7f0d00b6;
++        public static final int text = 0x7f0d00af;
++        public static final int text2 = 0x7f0d00ad;
+         public static final int textSpacerNoButtons = 0x7f0d0059;
+         public static final int textSpacerNoTitle = 0x7f0d0058;
+-        public static final int time = 0x7f0d00ae;
++        public static final int time = 0x7f0d00a5;
+         public static final int title = 0x7f0d0051;
+         public static final int titleDividerNoCustom = 0x7f0d0060;
+         public static final int title_template = 0x7f0d005e;
+@@ -682,25 +682,25 @@
+         public static final int abc_search_dropdown_item_icons_2line = 0x7f040018;
+         public static final int abc_search_view = 0x7f040019;
+         public static final int abc_select_dialog_material = 0x7f04001a;
+-        public static final int notification_action = 0x7f04002f;
+-        public static final int notification_action_tombstone = 0x7f040030;
+-        public static final int notification_media_action = 0x7f040031;
+-        public static final int notification_media_cancel_action = 0x7f040032;
+-        public static final int notification_template_big_media = 0x7f040033;
+-        public static final int notification_template_big_media_custom = 0x7f040034;
+-        public static final int notification_template_big_media_narrow = 0x7f040035;
+-        public static final int notification_template_big_media_narrow_custom = 0x7f040036;
+-        public static final int notification_template_custom_big = 0x7f040037;
+-        public static final int notification_template_icon_group = 0x7f040038;
+-        public static final int notification_template_lines_media = 0x7f040039;
+-        public static final int notification_template_media = 0x7f04003a;
+-        public static final int notification_template_media_custom = 0x7f04003b;
+-        public static final int notification_template_part_chronometer = 0x7f04003c;
+-        public static final int notification_template_part_time = 0x7f04003d;
+-        public static final int select_dialog_item_material = 0x7f04003e;
+-        public static final int select_dialog_multichoice_material = 0x7f04003f;
+-        public static final int select_dialog_singlechoice_material = 0x7f040040;
+-        public static final int support_simple_spinner_dropdown_item = 0x7f040041;
++        public static final int notification_action = 0x7f04002e;
++        public static final int notification_action_tombstone = 0x7f04002f;
++        public static final int notification_media_action = 0x7f040030;
++        public static final int notification_media_cancel_action = 0x7f040031;
++        public static final int notification_template_big_media = 0x7f040032;
++        public static final int notification_template_big_media_custom = 0x7f040033;
++        public static final int notification_template_big_media_narrow = 0x7f040034;
++        public static final int notification_template_big_media_narrow_custom = 0x7f040035;
++        public static final int notification_template_custom_big = 0x7f040036;
++        public static final int notification_template_icon_group = 0x7f040037;
++        public static final int notification_template_lines_media = 0x7f040038;
++        public static final int notification_template_media = 0x7f040039;
++        public static final int notification_template_media_custom = 0x7f04003a;
++        public static final int notification_template_part_chronometer = 0x7f04003b;
++        public static final int notification_template_part_time = 0x7f04003c;
++        public static final int select_dialog_item_material = 0x7f04003d;
++        public static final int select_dialog_multichoice_material = 0x7f04003e;
++        public static final int select_dialog_singlechoice_material = 0x7f04003f;
++        public static final int support_simple_spinner_dropdown_item = 0x7f040040;
+     }
+     public static final class string {
+         public static final int abc_action_bar_home_description = 0x7f070000;
+Index: app/build/generated/source/r/debug/android/support/design/R.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build/generated/source/r/debug/android/support/design/R.java	(revision )
++++ app/build/generated/source/r/debug/android/support/design/R.java	(revision )
+@@ -702,7 +702,7 @@
+         public static final int notify_panel_notification_icon_bg = 0x7f020066;
+     }
+     public static final class id {
+-        public static final int action0 = 0x7f0d00a6;
++        public static final int action0 = 0x7f0d009d;
+         public static final int action_bar = 0x7f0d006b;
+         public static final int action_bar_activity_content = 0x7f0d0000;
+         public static final int action_bar_container = 0x7f0d006a;
+@@ -710,17 +710,17 @@
+         public static final int action_bar_spinner = 0x7f0d0001;
+         public static final int action_bar_subtitle = 0x7f0d0049;
+         public static final int action_bar_title = 0x7f0d0048;
+-        public static final int action_container = 0x7f0d00a3;
++        public static final int action_container = 0x7f0d009a;
+         public static final int action_context_bar = 0x7f0d006c;
+-        public static final int action_divider = 0x7f0d00aa;
+-        public static final int action_image = 0x7f0d00a4;
++        public static final int action_divider = 0x7f0d00a1;
++        public static final int action_image = 0x7f0d009b;
+         public static final int action_menu_divider = 0x7f0d0002;
+         public static final int action_menu_presenter = 0x7f0d0003;
+         public static final int action_mode_bar = 0x7f0d0068;
+         public static final int action_mode_bar_stub = 0x7f0d0067;
+         public static final int action_mode_close_button = 0x7f0d004a;
+-        public static final int action_text = 0x7f0d00a5;
+-        public static final int actions = 0x7f0d00b2;
++        public static final int action_text = 0x7f0d009c;
++        public static final int actions = 0x7f0d00a9;
+         public static final int activity_chooser_view_content = 0x7f0d004b;
+         public static final int add = 0x7f0d0026;
+         public static final int alertTitle = 0x7f0d005f;
+@@ -730,12 +730,12 @@
+         public static final int beginning = 0x7f0d003f;
+         public static final int bottom = 0x7f0d002e;
+         public static final int buttonPanel = 0x7f0d0052;
+-        public static final int cancel_action = 0x7f0d00a7;
++        public static final int cancel_action = 0x7f0d009e;
+         public static final int center = 0x7f0d002f;
+         public static final int center_horizontal = 0x7f0d0030;
+         public static final int center_vertical = 0x7f0d0031;
+         public static final int checkbox = 0x7f0d0062;
+-        public static final int chronometer = 0x7f0d00af;
++        public static final int chronometer = 0x7f0d00a6;
+         public static final int clip_horizontal = 0x7f0d003a;
+         public static final int clip_vertical = 0x7f0d003b;
+         public static final int collapseActionView = 0x7f0d0042;
+@@ -744,15 +744,15 @@
+         public static final int customPanel = 0x7f0d005b;
+         public static final int decor_content_parent = 0x7f0d0069;
+         public static final int default_activity_button = 0x7f0d004e;
+-        public static final int design_bottom_sheet = 0x7f0d009a;
+-        public static final int design_menu_item_action_area = 0x7f0d00a1;
+-        public static final int design_menu_item_action_area_stub = 0x7f0d00a0;
+-        public static final int design_menu_item_text = 0x7f0d009f;
+-        public static final int design_navigation_view = 0x7f0d009e;
++        public static final int design_bottom_sheet = 0x7f0d0091;
++        public static final int design_menu_item_action_area = 0x7f0d0098;
++        public static final int design_menu_item_action_area_stub = 0x7f0d0097;
++        public static final int design_menu_item_text = 0x7f0d0096;
++        public static final int design_navigation_view = 0x7f0d0095;
+         public static final int disableHome = 0x7f0d001b;
+         public static final int edit_query = 0x7f0d006d;
+         public static final int end = 0x7f0d0032;
+-        public static final int end_padder = 0x7f0d00b9;
++        public static final int end_padder = 0x7f0d00b0;
+         public static final int enterAlways = 0x7f0d0021;
+         public static final int enterAlwaysCollapsed = 0x7f0d0022;
+         public static final int exitUntilCollapsed = 0x7f0d0023;
+@@ -765,29 +765,29 @@
+         public static final int home = 0x7f0d0004;
+         public static final int homeAsUp = 0x7f0d001c;
+         public static final int icon = 0x7f0d0050;
+-        public static final int icon_group = 0x7f0d00b3;
++        public static final int icon_group = 0x7f0d00aa;
+         public static final int ifRoom = 0x7f0d0043;
+         public static final int image = 0x7f0d004d;
+-        public static final int info = 0x7f0d00b0;
++        public static final int info = 0x7f0d00a7;
+         public static final int item_touch_helper_previous_elevation = 0x7f0d0005;
+-        public static final int largeLabel = 0x7f0d0098;
++        public static final int largeLabel = 0x7f0d008f;
+         public static final int left = 0x7f0d0034;
+-        public static final int line1 = 0x7f0d00b5;
+-        public static final int line3 = 0x7f0d00b7;
++        public static final int line1 = 0x7f0d00ac;
++        public static final int line3 = 0x7f0d00ae;
+         public static final int listMode = 0x7f0d0018;
+         public static final int list_item = 0x7f0d004f;
+-        public static final int masked = 0x7f0d00bb;
+-        public static final int media_actions = 0x7f0d00a9;
++        public static final int masked = 0x7f0d00b2;
++        public static final int media_actions = 0x7f0d00a0;
+         public static final int middle = 0x7f0d0040;
+         public static final int mini = 0x7f0d003e;
+         public static final int multiply = 0x7f0d0027;
+-        public static final int navigation_header_container = 0x7f0d009d;
++        public static final int navigation_header_container = 0x7f0d0094;
+         public static final int never = 0x7f0d0044;
+         public static final int none = 0x7f0d0017;
+         public static final int normal = 0x7f0d0019;
+-        public static final int notification_background = 0x7f0d00b1;
+-        public static final int notification_main_column = 0x7f0d00ac;
+-        public static final int notification_main_column_container = 0x7f0d00ab;
++        public static final int notification_background = 0x7f0d00a8;
++        public static final int notification_main_column = 0x7f0d00a3;
++        public static final int notification_main_column_container = 0x7f0d00a2;
+         public static final int parallax = 0x7f0d0038;
+         public static final int parentPanel = 0x7f0d0054;
+         public static final int pin = 0x7f0d0039;
+@@ -795,8 +795,8 @@
+         public static final int progress_horizontal = 0x7f0d0007;
+         public static final int radio = 0x7f0d0064;
+         public static final int right = 0x7f0d0035;
+-        public static final int right_icon = 0x7f0d00b4;
+-        public static final int right_side = 0x7f0d00ad;
++        public static final int right_icon = 0x7f0d00ab;
++        public static final int right_side = 0x7f0d00a4;
+         public static final int screen = 0x7f0d0028;
+         public static final int scroll = 0x7f0d0024;
+         public static final int scrollIndicatorDown = 0x7f0d005a;
+@@ -818,9 +818,9 @@
+         public static final int showCustom = 0x7f0d001d;
+         public static final int showHome = 0x7f0d001e;
+         public static final int showTitle = 0x7f0d001f;
+-        public static final int smallLabel = 0x7f0d0097;
+-        public static final int snackbar_action = 0x7f0d009c;
+-        public static final int snackbar_text = 0x7f0d009b;
++        public static final int smallLabel = 0x7f0d008e;
++        public static final int snackbar_action = 0x7f0d0093;
++        public static final int snackbar_text = 0x7f0d0092;
+         public static final int snap = 0x7f0d0025;
+         public static final int spacer = 0x7f0d0053;
+         public static final int split_action_bar = 0x7f0d0008;
+@@ -828,30 +828,30 @@
+         public static final int src_in = 0x7f0d002a;
+         public static final int src_over = 0x7f0d002b;
+         public static final int start = 0x7f0d0036;
+-        public static final int status_bar_latest_event_content = 0x7f0d00a8;
++        public static final int status_bar_latest_event_content = 0x7f0d009f;
+         public static final int submenuarrow = 0x7f0d0065;
+         public static final int submit_area = 0x7f0d0076;
+         public static final int tabMode = 0x7f0d001a;
+-        public static final int text = 0x7f0d00b8;
+-        public static final int text2 = 0x7f0d00b6;
++        public static final int text = 0x7f0d00af;
++        public static final int text2 = 0x7f0d00ad;
+         public static final int textSpacerNoButtons = 0x7f0d0059;
+         public static final int textSpacerNoTitle = 0x7f0d0058;
+-        public static final int text_input_password_toggle = 0x7f0d00a2;
++        public static final int text_input_password_toggle = 0x7f0d0099;
+         public static final int textinput_counter = 0x7f0d0009;
+         public static final int textinput_error = 0x7f0d000a;
+-        public static final int time = 0x7f0d00ae;
++        public static final int time = 0x7f0d00a5;
+         public static final int title = 0x7f0d0051;
+         public static final int titleDividerNoCustom = 0x7f0d0060;
+         public static final int title_template = 0x7f0d005e;
+         public static final int top = 0x7f0d0037;
+         public static final int topPanel = 0x7f0d005d;
+-        public static final int touch_outside = 0x7f0d0099;
++        public static final int touch_outside = 0x7f0d0090;
+         public static final int transition_current_scene = 0x7f0d000b;
+         public static final int transition_scene_layoutid_cache = 0x7f0d000c;
+         public static final int up = 0x7f0d000d;
+         public static final int useLogo = 0x7f0d0020;
+         public static final int view_offset_helper = 0x7f0d000e;
+-        public static final int visible = 0x7f0d00ba;
++        public static final int visible = 0x7f0d00b1;
+         public static final int withText = 0x7f0d0045;
+         public static final int wrap_content = 0x7f0d002c;
+     }
+@@ -894,39 +894,39 @@
+         public static final int abc_search_dropdown_item_icons_2line = 0x7f040018;
+         public static final int abc_search_view = 0x7f040019;
+         public static final int abc_select_dialog_material = 0x7f04001a;
+-        public static final int design_bottom_navigation_item = 0x7f040021;
+-        public static final int design_bottom_sheet_dialog = 0x7f040022;
+-        public static final int design_layout_snackbar = 0x7f040023;
+-        public static final int design_layout_snackbar_include = 0x7f040024;
+-        public static final int design_layout_tab_icon = 0x7f040025;
+-        public static final int design_layout_tab_text = 0x7f040026;
+-        public static final int design_menu_item_action_area = 0x7f040027;
+-        public static final int design_navigation_item = 0x7f040028;
+-        public static final int design_navigation_item_header = 0x7f040029;
+-        public static final int design_navigation_item_separator = 0x7f04002a;
+-        public static final int design_navigation_item_subheader = 0x7f04002b;
+-        public static final int design_navigation_menu = 0x7f04002c;
+-        public static final int design_navigation_menu_item = 0x7f04002d;
+-        public static final int design_text_input_password_icon = 0x7f04002e;
+-        public static final int notification_action = 0x7f04002f;
+-        public static final int notification_action_tombstone = 0x7f040030;
+-        public static final int notification_media_action = 0x7f040031;
+-        public static final int notification_media_cancel_action = 0x7f040032;
+-        public static final int notification_template_big_media = 0x7f040033;
+-        public static final int notification_template_big_media_custom = 0x7f040034;
+-        public static final int notification_template_big_media_narrow = 0x7f040035;
+-        public static final int notification_template_big_media_narrow_custom = 0x7f040036;
+-        public static final int notification_template_custom_big = 0x7f040037;
+-        public static final int notification_template_icon_group = 0x7f040038;
+-        public static final int notification_template_lines_media = 0x7f040039;
+-        public static final int notification_template_media = 0x7f04003a;
+-        public static final int notification_template_media_custom = 0x7f04003b;
+-        public static final int notification_template_part_chronometer = 0x7f04003c;
+-        public static final int notification_template_part_time = 0x7f04003d;
+-        public static final int select_dialog_item_material = 0x7f04003e;
+-        public static final int select_dialog_multichoice_material = 0x7f04003f;
+-        public static final int select_dialog_singlechoice_material = 0x7f040040;
+-        public static final int support_simple_spinner_dropdown_item = 0x7f040041;
++        public static final int design_bottom_navigation_item = 0x7f040020;
++        public static final int design_bottom_sheet_dialog = 0x7f040021;
++        public static final int design_layout_snackbar = 0x7f040022;
++        public static final int design_layout_snackbar_include = 0x7f040023;
++        public static final int design_layout_tab_icon = 0x7f040024;
++        public static final int design_layout_tab_text = 0x7f040025;
++        public static final int design_menu_item_action_area = 0x7f040026;
++        public static final int design_navigation_item = 0x7f040027;
++        public static final int design_navigation_item_header = 0x7f040028;
++        public static final int design_navigation_item_separator = 0x7f040029;
++        public static final int design_navigation_item_subheader = 0x7f04002a;
++        public static final int design_navigation_menu = 0x7f04002b;
++        public static final int design_navigation_menu_item = 0x7f04002c;
++        public static final int design_text_input_password_icon = 0x7f04002d;
++        public static final int notification_action = 0x7f04002e;
++        public static final int notification_action_tombstone = 0x7f04002f;
++        public static final int notification_media_action = 0x7f040030;
++        public static final int notification_media_cancel_action = 0x7f040031;
++        public static final int notification_template_big_media = 0x7f040032;
++        public static final int notification_template_big_media_custom = 0x7f040033;
++        public static final int notification_template_big_media_narrow = 0x7f040034;
++        public static final int notification_template_big_media_narrow_custom = 0x7f040035;
++        public static final int notification_template_custom_big = 0x7f040036;
++        public static final int notification_template_icon_group = 0x7f040037;
++        public static final int notification_template_lines_media = 0x7f040038;
++        public static final int notification_template_media = 0x7f040039;
++        public static final int notification_template_media_custom = 0x7f04003a;
++        public static final int notification_template_part_chronometer = 0x7f04003b;
++        public static final int notification_template_part_time = 0x7f04003c;
++        public static final int select_dialog_item_material = 0x7f04003d;
++        public static final int select_dialog_multichoice_material = 0x7f04003e;
++        public static final int select_dialog_singlechoice_material = 0x7f04003f;
++        public static final int support_simple_spinner_dropdown_item = 0x7f040040;
+     }
+     public static final class string {
+         public static final int abc_action_bar_home_description = 0x7f070000;
+@@ -963,11 +963,11 @@
+         public static final int appbar_scrolling_view_behavior = 0x7f070026;
+         public static final int bottom_sheet_behavior = 0x7f070027;
+         public static final int character_counter_pattern = 0x7f070028;
+-        public static final int password_toggle_content_description = 0x7f070032;
+-        public static final int path_password_eye = 0x7f070033;
+-        public static final int path_password_eye_mask_strike_through = 0x7f070034;
+-        public static final int path_password_eye_mask_visible = 0x7f070035;
+-        public static final int path_password_strike_through = 0x7f070036;
++        public static final int password_toggle_content_description = 0x7f070031;
++        public static final int path_password_eye = 0x7f070032;
++        public static final int path_password_eye_mask_strike_through = 0x7f070033;
++        public static final int path_password_eye_mask_visible = 0x7f070034;
++        public static final int path_password_strike_through = 0x7f070035;
+         public static final int search_menu_title = 0x7f070013;
+         public static final int status_bar_notification_info_overflow = 0x7f070014;
+     }
+Index: app/app.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/app.iml	(revision )
++++ app/app.iml	(revision )
+@@ -27,18 +27,18 @@
+     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
+     <exclude-output />
+     <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/debug" isTestSource="false" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/debug" isTestSource="false" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/debug" isTestSource="false" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/debug" isTestSource="false" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/debug" isTestSource="false" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/debug" type="java-resource" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/debug" type="java-resource" />
+-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/debug" isTestSource="true" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/debug" isTestSource="true" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/debug" isTestSource="true" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/debug" isTestSource="true" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/debug" isTestSource="true" generated="true" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/debug" type="java-test-resource" />
+       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/debug" type="java-test-resource" />
+       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
+@@ -102,7 +102,6 @@
+     </content>
+     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" exported="" name="okio-1.8.0" level="project" />
+     <orderEntry type="library" exported="" scope="TEST" name="runner-0.5" level="project" />
+     <orderEntry type="library" exported="" scope="TEST" name="espresso-idling-resource-2.2.2" level="project" />
+     <orderEntry type="library" exported="" name="constraint-layout-1.0.2" level="project" />
+@@ -120,14 +119,10 @@
+     <orderEntry type="library" exported="" name="constraint-layout-solver-1.0.2" level="project" />
+     <orderEntry type="library" exported="" scope="TEST" name="javax.annotation-api-1.2" level="project" />
+     <orderEntry type="library" exported="" scope="TEST" name="javax.inject-1" level="project" />
+-    <orderEntry type="library" exported="" name="retrofit-2.1.0" level="project" />
+-    <orderEntry type="library" exported="" name="gson-2.7" level="project" />
+-    <orderEntry type="library" exported="" name="converter-gson-2.1.0" level="project" />
+     <orderEntry type="library" exported="" scope="TEST" name="javawriter-2.1.1" level="project" />
+     <orderEntry type="library" exported="" name="support-v4-25.3.1" level="project" />
+     <orderEntry type="library" exported="" name="support-media-compat-25.3.1" level="project" />
+     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.3" level="project" />
+-    <orderEntry type="library" exported="" name="okhttp-3.3.0" level="project" />
+     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
+     <orderEntry type="library" exported="" name="recyclerview-v7-25.3.1" level="project" />
+     <orderEntry type="library" exported="" name="support-annotations-25.3.1" level="project" />
+\ No newline at end of file
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision )
++++ app/build.gradle	(revision )
+@@ -1,5 +1,4 @@
+ apply plugin: 'com.android.application'
+-apply plugin: 'com.neenbedankt.android-apt' //Retrofit
+ 
+ android {
+     compileSdkVersion 25
+@@ -25,17 +24,8 @@
+     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+         exclude group: 'com.android.support', module: 'support-annotations'
+     })
+-
+-    //Retrofit
+-    
+-
+     compile 'com.android.support:appcompat-v7:25.3.1'
+     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+     compile 'com.android.support:design:25.3.1'
+-
+-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+-    compile 'com.google.code.gson:gson:2.6.2'
+-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+     testCompile 'junit:junit:4.12'
+ }
