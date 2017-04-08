@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btarefasmensais = (Button) findViewById(R.id.irTarefa);
-        btarefasmensais.setOnClickListener(new View.OnClickListener() {
+        Button buttontarefasmensais = (Button) findViewById(R.id.irTarefa);
+        buttontarefasmensais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent itm = new Intent(MainActivity.this, TarefasMensaisActivity.class);
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         bfazendas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent iFarm = new Intent(MainActivity.this, TarefasMensaisActivity.class);
+                Intent iFarm = new Intent(MainActivity.this, ListarFazendaActivity.class);
                 startActivity(iFarm);
             }
         });

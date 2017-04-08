@@ -8,6 +8,7 @@ import android.support.design.widget.FloatingActionButton;
 
 import android.os.Bundle;
 
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import android.widget.AdapterView;
@@ -15,7 +16,7 @@ import android.widget.ListView;
 
 import com.example.sarah.ajudanteveterinarioandroid.R;
 
-public class ListarFazendaActivity extends ListActivity {
+public class ListarFazendaActivity extends AppCompatActivity {
 
     public Integer idfazenda;
 
@@ -46,14 +47,14 @@ public class ListarFazendaActivity extends ListActivity {
             }
         });
 
-        ListView listView = getListView(); // hear bind your listview
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> listView, View itemView, int itemPosition, long itemId) {
-                Intent ipfa = new Intent(ListarFazendaActivity.this, PerfilFazendaActivity.class);
-                startActivity(ipfa);
-                idfazenda = (int) itemId;
-            }
-        });
+        //ListView listView = getListView(); // hear bind your listview
+        //listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //    public void onItemClick(AdapterView<?> listView, View itemView, int itemPosition, long itemId) {
+        //        Intent ipfa = new Intent(ListarFazendaActivity.this, PerfilFazendaActivity.class);
+        //        startActivity(ipfa);
+        //        idfazenda = (int) itemId;
+        //    }
+        //});
 
     }
 }

@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.example.sarah.ajudanteveterinarioandroid.R;
 
-public class TarefasMensaisActivity extends ListActivity {
+public class TarefasMensaisActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,6 @@ public class TarefasMensaisActivity extends ListActivity {
                 startActivity(ivm);
             }
         });
-
 
     }
 }

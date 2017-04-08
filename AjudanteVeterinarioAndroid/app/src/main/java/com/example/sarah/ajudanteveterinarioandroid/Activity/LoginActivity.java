@@ -3,6 +3,7 @@ package com.example.sarah.ajudanteveterinarioandroid.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AutoCompleteTextView;
@@ -14,8 +15,6 @@ public class LoginActivity extends AppCompatActivity{
 
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
-    private View mProgressView = findViewById(R.id.login_progress);
-    private View mLoginFormView = findViewById(R.id.login_form);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
