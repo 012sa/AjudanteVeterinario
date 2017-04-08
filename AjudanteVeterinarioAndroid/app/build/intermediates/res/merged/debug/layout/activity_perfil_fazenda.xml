@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sarah.ajudanteveterinarioandroid.Activity.PerfilFazendaActivity">
+
+    <TextView
+        android:id="@+id/textViewProprietario"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name_of_owner"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="160dp"
+        android:id="@+id/edittextProprietarioPF"/>
+
+    <TextView
+        android:id="@+id/textViewPropriedade"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name_of_farm"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="249dp"
+        android:id="@+id/edittextPropriedadePF"/>
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_email"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="326dp" />
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="343dp"
+        android:id="@+id/edittextEmailPF"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonAlterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:layout_editor_absoluteY="719dp"
+        tools:layout_editor_absoluteX="424dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonSair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tint="@color/colorPrimaryLight"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_keyboard_backspace_black_48dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="719dp" />
+
+
+    <Button
+        android:id="@+id/buttonIrAosAnimais"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:text="@string/see_the_animals"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="444dp" />
+
+</android.support.constraint.ConstraintLayout>
