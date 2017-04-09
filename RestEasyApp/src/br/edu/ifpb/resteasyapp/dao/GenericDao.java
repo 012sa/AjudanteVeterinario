@@ -100,6 +100,30 @@ public abstract class GenericDao<PK, T> {
 		
 		return entity;
 	}
+	
+	public void updateEntity(T entity) throws SQLException{
+		
+		logger.info("Init abstract Update to: " + entity.getClass());
+		
+		Session session = HibernateUtil.getSessionFactory().openSession();
+
+		try {
+			
+			session.beginTransaction();
+			session.update(entity);
+			session.getTransaction().commit();
+
+		} catch (HibernateException hibernateException) {
+			
+			session.getTransaction().rollback();
+			
+			throw new SQLException(hibernateException);
+			
+		} finally {
+			
+			session.close();
+		}
+	}
 
 	public void delete(T entity) throws SQLException {
 		

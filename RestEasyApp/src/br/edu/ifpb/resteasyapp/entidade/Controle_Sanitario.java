@@ -31,7 +31,7 @@ public class Controle_Sanitario {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column (name="id_controle")
+	@Column (name="id_controleS")
 	private int id;
 	
 	@Column (name="descricao")
