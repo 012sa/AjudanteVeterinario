@@ -1,22 +1,21 @@
-package com.example.sarah.vetapp.Network;
+package com.example.sarah.ajudanteveterinarioandroid.Network;
 
 /**
- * Created by Sarah on 04/04/2017.
+ * Created by sarah on 09/04/2017.
  */
-
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.Retrofit;
 
 public class ConnectionServer {
 
-   private static final String URL_BASES = "http://localhost:8080/RestEasyApp/";
+    private static final String URL_BASES = "http://localhost:8080/RestEasyApp/";
 
 
     private static APIService service;
     private static ConnectionServer ourInstance = new ConnectionServer();
 
     public static ConnectionServer getInstance() {
-       return ourInstance;
+        return ourInstance;
     }
 
     public APIService getService() {

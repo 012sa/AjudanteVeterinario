@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:tint="@color/colorPrimaryLight"
+        app:backgroundTint="@android:color/holo_red_light"
         app:fabSize="mini"
         app:srcCompat="@drawable/ic_add_black_48dp"
         tools:layout_editor_absoluteX="16dp"

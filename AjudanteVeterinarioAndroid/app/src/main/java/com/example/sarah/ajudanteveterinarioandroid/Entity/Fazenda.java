@@ -1,4 +1,8 @@
-package com.example.sarah.vetapp.Entity;
+package com.example.sarah.ajudanteveterinarioandroid.Entity;
+
+/**
+ * Created by sarah on 09/04/2017.
+ */
 
 public class Fazenda {
 

@@ -16,7 +16,8 @@
         android:layout_marginBottom="92dp"
         android:text="@string/farm"
         app:layout_constraintBottom_toTopOf="@+id/irTarefa"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:targetApi="lollipop" />
 
     <Button
         android:id="@+id/irTarefa"
@@ -28,7 +29,8 @@
         android:layout_marginBottom="215dp"
         android:text="@string/Monthly_Tasks"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="441dp" />
+        tools:layout_editor_absoluteY="441dp"
+        tools:targetApi="lollipop" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButtonSair"
