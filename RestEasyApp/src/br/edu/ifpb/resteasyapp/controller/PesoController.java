@@ -15,8 +15,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
+import br.edu.ifpb.resteasyapp.dao.AnimalDAO;
 import br.edu.ifpb.resteasyapp.dao.PesoDAO;
 import br.edu.ifpb.resteasyapp.dao.PropriedadeDAO;
+import br.edu.ifpb.resteasyapp.entidade.Animal;
 import br.edu.ifpb.resteasyapp.entidade.Peso;
 import br.edu.ifpb.resteasyapp.entidade.Propriedade;
 
@@ -40,12 +42,12 @@ public class PesoController {
 		// nesse ponto ao biuld (response).
 
 		try {
-
+			
 			int id_peso = PesoDAO.getInstance().insert(peso);
 
 			peso.setId(id_peso);
 
-			builder.status(Response.Status.OK).entity(peso);
+			builder.status(Response.Status.CREATED).entity(peso);
 
 		} catch (SQLException e) {
 
@@ -79,7 +81,31 @@ public class PesoController {
 		// Será retornado ao cliente um conjunto de alunos no formato de Json.
 		return pesos;
 	}
+	
+	@PermitAll
+	@GET
+	@Path("/listar")
+	@Produces("application/json")
+	public List<Peso> getAll() {
 
+		// Retorno em formato de lista.
+		// Desse modo o response sempre conterá o código de resposta OK.
+		List<Peso> pesos = new ArrayList<Peso>();
+
+		try {
+
+			// TODO: Regra de negócio e manipulação de dados nesse ponto.
+			pesos = PesoDAO.getInstance().getAll();
+
+		} catch (SQLException e) {
+
+			// TODO: Tratar a exceção.
+		}
+
+		// Será retornado ao cliente um conjunto de alunos no formato de Json.
+		return pesos;
+	}
+	
 	@PermitAll
 	@GET
 	@Path("/id/{id}")

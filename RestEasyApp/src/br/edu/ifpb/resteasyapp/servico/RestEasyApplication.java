@@ -7,7 +7,10 @@ import javax.ws.rs.core.Application;
 
 import org.jboss.resteasy.plugins.interceptors.CorsFilter;
 
+import br.edu.ifpb.resteasyapp.controller.AnimalController;
 import br.edu.ifpb.resteasyapp.controller.FazendaInteressadaController;
+import br.edu.ifpb.resteasyapp.controller.PesoController;
+import br.edu.ifpb.resteasyapp.controller.PropriedadeController;
 
 public class RestEasyApplication extends Application {
 
@@ -25,7 +28,10 @@ public class RestEasyApplication extends Application {
 		this.singletons.add(filter);
 		
 		// Controllers disponíveis no serviço.
-		this.singletons.add(new FazendaInteressadaController());		
+		this.singletons.add(new FazendaInteressadaController());
+		this.singletons.add(new PropriedadeController());
+		this.singletons.add(new AnimalController());
+		this.singletons.add(new PesoController());
 	}
 
 	public Set<Class<?>> getClasses() {

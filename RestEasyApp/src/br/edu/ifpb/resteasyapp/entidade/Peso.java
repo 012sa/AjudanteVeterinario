@@ -9,6 +9,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
@@ -23,7 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Peso {
 
 	public Peso() {
-
+		
 	}
 
 	public Peso(double peso, Animal animal, Date registro) {
@@ -42,11 +43,11 @@ public class Peso {
 	private double peso;
 
 	@OneToOne(cascade = CascadeType.ALL, optional = false, fetch = FetchType.EAGER)
-	@PrimaryKeyJoinColumn
+	@JoinColumn(name = "id_animal")
 	private Animal animal;
 
 	@Column(name = "registro")
-	private Date registro;
+	private Date registro = new Date();
 
 	@XmlElement
 	public int getId() {

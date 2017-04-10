@@ -18,7 +18,7 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 import br.edu.ifpb.resteasyapp.dao.PropriedadeDAO;
 import br.edu.ifpb.resteasyapp.entidade.Propriedade;
 
-@Path("propridade")
+@Path("propriedade")
 public class PropriedadeController {
 
 	@PermitAll

@@ -20,13 +20,14 @@ public class Animal {
 
 	}
 
-	public Animal(String raca, String nome, String tipo, String sexo, String pais, int idade) {
+	public Animal(String raca, String classificacao, String mae, String tipo, String sexo, String pais, int idade) {
 		super();
 		this.raca = raca;
+		this.classificacao = classificacao;
 		this.nome = nome;
 		this.tipo = tipo;
 		this.sexo = sexo;
-		this.pais = pais;
+		this.mae = mae;
 		this.idade = idade;
 	}
 
@@ -37,6 +38,9 @@ public class Animal {
 
 	@Column(name = "raca")
 	private String raca;
+	
+	@Column(name = "classificacao")
+	private String classificacao;
 
 	@Column(name = "nome")
 	private String nome;
@@ -47,8 +51,8 @@ public class Animal {
 	@Column(name = "sexo")
 	private String sexo;
 
-	@Column(name = "pais")
-	private String pais;
+	@Column(name = "mae")
+	private String mae;
 
 	@Column(name = "idade")
 	private int idade;
@@ -69,6 +73,15 @@ public class Animal {
 
 	public void setRaca(String raca) {
 		this.raca = raca;
+	}
+	
+	@XmlElement
+	public String getClassificacao() {
+		return classificacao;
+	}
+
+	public void setClassificacao(String classificacao) {
+		this.classificacao = classificacao;
 	}
 
 	@XmlElement
@@ -99,12 +112,12 @@ public class Animal {
 	}
 
 	@XmlElement
-	public String getPais() {
-		return pais;
+	public String getMae() {
+		return mae;
 	}
 
-	public void setPais(String pais) {
-		this.pais = pais;
+	public void setMae(String mae) {
+		this.mae = mae;
 	}
 
 	@XmlElement
@@ -119,7 +132,7 @@ public class Animal {
 	@Override
 	public String toString() {
 		return "Animal [id=" + id + ", raca=" + raca + ", nome=" + nome + ", tipo=" + tipo + ", sexo=" + sexo
-				+ ", pais=" + pais + ", idade=" + idade + "]";
+				+ ", mae=" + mae + ", idade=" + idade + "]";
 	}
 
 }

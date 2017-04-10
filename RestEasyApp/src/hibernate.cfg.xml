@@ -37,7 +37,9 @@
 		<property name="hibernate.c3p0.preferredTestQuery">select 1;</property>
 		
 		<!-- Entidades -->
-		<mapping class="br.edu.ifpb.resteasyapp.entidade.Fazenda" />									
+		<mapping class="br.edu.ifpb.resteasyapp.entidade.Propriedade" />
+		<mapping class="br.edu.ifpb.resteasyapp.entidade.Animal" />
+		<mapping class="br.edu.ifpb.resteasyapp.entidade.Peso" />									
 
 	</session-factory>
 </hibernate-configuration>
