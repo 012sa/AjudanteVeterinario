@@ -1,6 +1,9 @@
 package com.example.sarah.ajudanteveterinarioandroid.Network;
 
-import com.example.sarah.ajudanteveterinarioandroid.Entity.Fazenda;
+import com.example.sarah.ajudanteveterinarioandroid.Entity.Propriedade;
+
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -12,19 +15,19 @@ import retrofit2.http.Path;
 
 public interface APIService {
 
-    @GET("fazenda/id/{id}")
-    Call<Fazenda> inserirFazenda(@Path("id") int id);
+    @GET("PropriedadeController/id/{id}")
+    Call<Propriedade> inserirFazenda(@Path("id") int id);
 
-    @GET("fazenda/listar")
-    Call<Fazenda> getFazendas();
+    @GET("PropriedadeController/listar")
+    Call<List<Propriedade>> getFazendas();
 
-    @POST("fazenda/inserir")
-    Call<Fazenda> inserirFazenda(@Body Fazenda fazenda);
+    @POST("PropriedadeController/inserir")
+    Call<Propriedade> inserirFazenda(@Body Propriedade propriedade);
 
-    @POST("fazenda/deletar")
-    Call<Fazenda> deletarFazenda(@Body Fazenda fazenda);
+    @POST("PropriedadeController/deletar")
+    Call<Propriedade> deletarFazenda(@Body Propriedade propriedade);
 
-    @POST("fazenda/alterar")
-    Call<Fazenda> alterarFazenda(@Body Fazenda fazenda);
+    @POST("PropriedadeController/alterar")
+    Call<Propriedade> alterarFazenda(@Body Propriedade propriedade);
 
 }

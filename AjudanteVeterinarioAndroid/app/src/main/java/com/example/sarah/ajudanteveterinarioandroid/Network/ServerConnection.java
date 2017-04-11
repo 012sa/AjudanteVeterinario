@@ -6,15 +6,15 @@ package com.example.sarah.ajudanteveterinarioandroid.Network;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.Retrofit;
 
-public class ConnectionServer {
+public class ServerConnection {
 
-    private static final String URL_BASES = "http://localhost:8080/RestEasyApp/";
+    private static final String URL_BASES = "http://localhost:8081/RestEasyApp/";
 
 
     private static APIService service;
-    private static ConnectionServer ourInstance = new ConnectionServer();
+    private static ServerConnection ourInstance = new ServerConnection();
 
-    public static ConnectionServer getInstance() {
+    public static ServerConnection getInstance() {
         return ourInstance;
     }
 
@@ -22,7 +22,7 @@ public class ConnectionServer {
         return service;
     }
 
-    private ConnectionServer() {
+    private ServerConnection() {
         updateServiceAdress();
     }
 

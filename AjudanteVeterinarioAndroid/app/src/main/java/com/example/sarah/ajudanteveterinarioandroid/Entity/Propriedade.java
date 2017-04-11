@@ -4,14 +4,14 @@ package com.example.sarah.ajudanteveterinarioandroid.Entity;
  * Created by sarah on 09/04/2017.
  */
 
-public class Fazenda {
+public class Propriedade {
 
     private int id;
     private String propriedade;
     private String proprietario;
     private String email;
 
-    public Fazenda(String propriedade, String proprietario, String email) {
+    public Propriedade(String propriedade, String proprietario, String email) {
         this.propriedade = propriedade;
         this.proprietario = proprietario;
         this.email = email;
@@ -51,7 +51,7 @@ public class Fazenda {
 
     @Override
     public String toString() {
-        return "Fazenda{" +
+        return "Propriedade{" +
                 "id=" + id +
                 ", propriedade='" + propriedade + '\'' +
                 ", proprietario='" + proprietario + '\'' +

@@ -33,7 +33,7 @@ public class CadastrarFazendaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //codico para --> add no banco
-                //a fazenda
+                //a propriedade
                 Intent ivlf = new Intent(CadastrarFazendaActivity.this, ListarFazendaActivity.class);
                 startActivity(ivlf);
             }
