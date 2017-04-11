@@ -1,5 +1,4 @@
 package com.example.sarah.ajudanteveterinarioandroid.Network;
-
 import com.example.sarah.ajudanteveterinarioandroid.Entity.Propriedade;
 
 import java.util.List;
@@ -9,6 +8,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+
 /**
  * Created by sarah on 09/04/2017.
  */

@@ -8,7 +8,7 @@ import retrofit2.Retrofit;
 
 public class ServerConnection {
 
-    private static final String URL_BASES = "http://localhost:8081/RestEasyApp/";
+    private static final String URL_BASES = "http://192.168.0.24:8080/RestEasyApp/";
 
 
     private static APIService service;

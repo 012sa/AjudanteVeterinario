@@ -27,10 +27,7 @@ public class LoginActivity extends AppCompatActivity{
         mSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                mSignInButton.setOnClickListener(new OnClickListener() {
 
-                    @Override
-                    public void onClick(View view) {
                         // Stores User name
                         //mudar quando a url for liberada
                         String username = String.valueOf(mEmailView.getText());
@@ -46,11 +43,8 @@ public class LoginActivity extends AppCompatActivity{
                             mPasswordView.setText("");
                             mEmailView.setText("");
                         }
-                    }
-                });
             }
         });
     }
-
 }
 
