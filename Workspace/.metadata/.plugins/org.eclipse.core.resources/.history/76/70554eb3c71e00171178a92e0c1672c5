@@ -27,7 +27,6 @@ public abstract class GenericDao<PK, T> {
 		
 		try {
 			
-			
 			session.beginTransaction();
 			id = (Integer) session.save(entity);
 			session.getTransaction().commit();

@@ -16,19 +16,17 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
 import br.edu.ifpb.resteasyapp.dao.PropriedadeDAO;
-import br.edu.ifpb.resteasyapp.dao.VeterinarioDAO;
 import br.edu.ifpb.resteasyapp.entidade.Propriedade;
-import br.edu.ifpb.resteasyapp.entidade.Veterinario;
 
-@Path("veterinario")
-public class VeterinarioController {
+@Path("propriedade")
+public class PropriedadeController {
 
 	@PermitAll
 	@POST
 	@Path("/inserir")
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response insert(Veterinario veterinario) {
+	public Response insert(Propriedade propriedade) {
 
 		// Preparando a resposta. Provisoriamente o sistema preparará a resposta
 		// como requisição incorreta.
@@ -41,11 +39,11 @@ public class VeterinarioController {
 
 		try {
 
-			int id_veterinario = VeterinarioDAO.getInstance().insert(veterinario);
+			int id_propriedade = PropriedadeDAO.getInstance().insert(propriedade);
 
-			veterinario.setId(id_veterinario);
+			propriedade.setId(id_propriedade);
 
-			builder.status(Response.Status.CREATED).entity(veterinario);
+			builder.status(Response.Status.CREATED).entity(propriedade);
 
 		} catch (SQLException e) {
 
@@ -60,16 +58,16 @@ public class VeterinarioController {
 	@GET
 	@Path("/listar")
 	@Produces("application/json")
-	public List<Veterinario> getAll() {
+	public List<Propriedade> getAll() {
 
 		// Retorno em formato de lista.
 		// Desse modo o response sempre conterá o código de resposta OK.
-		List<Veterinario> veterinarios = new ArrayList<Veterinario>();
+		List<Propriedade> propriedades = new ArrayList<Propriedade>();
 
 		try {
 
 			// TODO: Regra de negócio e manipulação de dados nesse ponto.
-			veterinarios = VeterinarioDAO.getInstance().getAll();
+			propriedades = PropriedadeDAO.getInstance().getAll();
 
 		} catch (SQLException e) {
 
@@ -77,14 +75,14 @@ public class VeterinarioController {
 		}
 
 		// Será retornado ao cliente um conjunto de alunos no formato de Json.
-		return veterinarios;
+		return propriedades;
 	}
 
 	@PermitAll
 	@GET
 	@Path("/id/{id}")
 	@Produces("application/json")
-	public Response getVeterinarioById(@PathParam("id") int id_veterinario) {
+	public Response getPropriedadeById(@PathParam("id") int id_propriedade) {
 
 		// Preparando a resposta. Provisoriamente o sistema preparará a resposta
 		// como requisição incorreta.
@@ -94,13 +92,13 @@ public class VeterinarioController {
 		try {
 
 			// Regra de negócio e manipulação de dados nesse ponto.
-			Veterinario veterinario = VeterinarioDAO.getInstance().getById(id_veterinario);
+			Propriedade propriedade = PropriedadeDAO.getInstance().getById(id_propriedade);
 
-			if (veterinario != null) {
+			if (propriedade != null) {
 
 				// As informaçãos associadas ao build para o response.
 				builder.status(Response.Status.OK);
-				builder.entity(veterinario);
+				builder.entity(propriedade);
 
 			} else {
 
@@ -122,23 +120,23 @@ public class VeterinarioController {
 	@Path("/deletar")
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response delete(Veterinario veterinario) {
+	public Response delete(Propriedade propriedade) {
 		
 		ResponseBuilder builder = Response.status(Response.Status.BAD_REQUEST);
 		builder.expires(new Date());
 
 		try {
 
-			VeterinarioDAO.getInstance().delete(veterinario);
-			veterinario = VeterinarioDAO.getInstance().find(veterinario);
+			PropriedadeDAO.getInstance().delete(propriedade);
+			propriedade = PropriedadeDAO.getInstance().find(propriedade);
 			
-			if (veterinario != null){
+			if (propriedade != null){
 				
 				builder.status(418); //I'm a teapot
 				
 			} else {
 				
-				builder.status(Response.Status.NO_CONTENT).entity(veterinario);
+				builder.status(Response.Status.NO_CONTENT).entity(propriedade);
 				
 			}
 
@@ -154,16 +152,16 @@ public class VeterinarioController {
 	@Path("/alterar")
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response update(Veterinario veterinario) {
+	public Response update(Propriedade propriedade) {
 
 		ResponseBuilder builder = Response.status(Response.Status.BAD_REQUEST);
 		builder.expires(new Date());
 
 		try {
 
-			VeterinarioDAO.getInstance().updateEntity(veterinario);
-			VeterinarioDAO.getInstance().find(veterinario);
-			builder.status(Response.Status.OK).entity(veterinario);
+			PropriedadeDAO.getInstance().updateEntity(propriedade);
+			PropriedadeDAO.getInstance().find(propriedade);
+			builder.status(Response.Status.OK).entity(propriedade);
 
 		} catch (SQLException exception) {
 			builder.status(Response.Status.INTERNAL_SERVER_ERROR);

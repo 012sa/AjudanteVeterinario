@@ -28,12 +28,12 @@ public class PesoController {
 	@PermitAll
 	@POST
 	@Path("/inserir")
-	@Consumes("application/json")
-	@Produces("application/json")
+	@Consumes("application/json") // Recebe Json e deve converter pra objeto Peso antes de entrar no método
+	@Produces("application/json")// Faz as parada tudu e converte pra Json
 	public Response insert(Peso peso) {
 
-		// Preparando a resposta. Provisoriamente o sistema preparará a resposta
-		// como requisição incorreta.
+		// 
+		// 
 		ResponseBuilder builder = Response.status(Response.Status.BAD_REQUEST);
 		builder.expires(new Date());
 
@@ -43,9 +43,7 @@ public class PesoController {
 
 		try {
 			
-			int id_peso = PesoDAO.getInstance().insert(peso);
-
-			peso.setId(id_peso);
+			PesoDAO.getInstance().insertOrUpdate(peso);
 
 			builder.status(Response.Status.CREATED).entity(peso);
 
@@ -56,6 +54,7 @@ public class PesoController {
 
 		// Resposta.
 		return builder.build();
+	
 	}
 
 	@PermitAll

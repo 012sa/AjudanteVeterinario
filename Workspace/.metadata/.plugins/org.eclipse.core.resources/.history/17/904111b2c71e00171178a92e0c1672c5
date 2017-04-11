@@ -47,7 +47,7 @@ public class PesoDAO extends GenericDao<Integer, Peso> {
 
 			Query query = session.createQuery(hql);
 
-			query.setParameter("id_animal", id_animal);
+			query.setParameter("id_animal", "%" + id_animal + "%");
 
 			pesos = (List<Peso>) query.list();
 

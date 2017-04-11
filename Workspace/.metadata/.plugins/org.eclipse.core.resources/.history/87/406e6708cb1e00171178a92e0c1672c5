@@ -15,9 +15,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
-import br.edu.ifpb.resteasyapp.dao.PropriedadeDAO;
 import br.edu.ifpb.resteasyapp.dao.VeterinarioDAO;
-import br.edu.ifpb.resteasyapp.entidade.Propriedade;
 import br.edu.ifpb.resteasyapp.entidade.Veterinario;
 
 @Path("veterinario")
@@ -45,7 +43,7 @@ public class VeterinarioController {
 
 			veterinario.setId(id_veterinario);
 
-			builder.status(Response.Status.CREATED).entity(veterinario);
+			builder.status(Response.Status.OK).entity(veterinario);
 
 		} catch (SQLException e) {
 
@@ -114,61 +112,6 @@ public class VeterinarioController {
 		}
 
 		// Resposta
-		return builder.build();
-	}
-	
-	@PermitAll
-	@POST
-	@Path("/deletar")
-	@Consumes("application/json")
-	@Produces("application/json")
-	public Response delete(Veterinario veterinario) {
-		
-		ResponseBuilder builder = Response.status(Response.Status.BAD_REQUEST);
-		builder.expires(new Date());
-
-		try {
-
-			VeterinarioDAO.getInstance().delete(veterinario);
-			veterinario = VeterinarioDAO.getInstance().find(veterinario);
-			
-			if (veterinario != null){
-				
-				builder.status(418); //I'm a teapot
-				
-			} else {
-				
-				builder.status(Response.Status.NO_CONTENT).entity(veterinario);
-				
-			}
-
-		} catch (SQLException exception) {
-			builder.status(Response.Status.INTERNAL_SERVER_ERROR);
-		}
-
-		return builder.build();
-	}
-	
-	@PermitAll
-	@POST
-	@Path("/alterar")
-	@Consumes("application/json")
-	@Produces("application/json")
-	public Response update(Veterinario veterinario) {
-
-		ResponseBuilder builder = Response.status(Response.Status.BAD_REQUEST);
-		builder.expires(new Date());
-
-		try {
-
-			VeterinarioDAO.getInstance().updateEntity(veterinario);
-			VeterinarioDAO.getInstance().find(veterinario);
-			builder.status(Response.Status.OK).entity(veterinario);
-
-		} catch (SQLException exception) {
-			builder.status(Response.Status.INTERNAL_SERVER_ERROR);
-		}
-
 		return builder.build();
 	}
 
