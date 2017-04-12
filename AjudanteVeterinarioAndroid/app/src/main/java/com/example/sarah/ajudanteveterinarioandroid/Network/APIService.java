@@ -37,6 +37,9 @@ public interface APIService {
     @GET("controller/AnimalController/listar")
     Call<List<Animal>> listarAnimal(@Body Animal animal);
 
+    @GET("controller/AnimalController/listar")
+    Call<List<Animal>> getAnimal();
+
     @GET("controller/AnimalController/id/{id}")
     Call<Animal>inserirAnimalid(@Path("id") int id) ;
 
@@ -44,6 +47,6 @@ public interface APIService {
     Call<Animal> deletarAnimal(@Body Animal animal);
 
     @POST("controller/AnimalController/alterar")
-    Call<Animal> alteraarAnimal(@Body Animal animal);
+    Call<Animal> alterarAnimal(@Body Animal animal);
 
 }

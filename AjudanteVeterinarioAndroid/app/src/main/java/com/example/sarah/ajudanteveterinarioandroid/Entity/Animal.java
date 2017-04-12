@@ -32,6 +32,9 @@ public class Animal {
 
     }
 
+    public Animal(Integer id, String nmnome, Integer intidade, String nmraca, String nmtipo, String nmsexo, String nmMae) {
+    }
+
     public int getId() {
 
         return id;

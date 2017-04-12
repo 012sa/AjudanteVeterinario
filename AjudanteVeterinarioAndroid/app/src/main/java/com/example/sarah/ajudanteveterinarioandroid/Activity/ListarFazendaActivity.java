@@ -95,25 +95,33 @@ public class ListarFazendaActivity extends AppCompatActivity {
                         try{
 
                             if(response.isSuccessful()){
-                                List<Propriedade> chavesResponse = response.body();
+                                List<Propriedade> propriedadesResponse = response.body();
 
-                                propriedade.addAll(chavesResponse);
+                                propriedade.addAll(propriedadesResponse);
                                 fazendaArrayAdapter.notifyDataSetChanged();
+
                             }
                             else{
+
                                 Log.e(this.getClass().toString(), "Error on calling");
+
                             }
 
 
                         }
+
                         catch (Exception e){
+
                             Log.e(this.getClass().toString(), "Error on calling");
+
                         }
                     }
 
                     @Override
                     public void onFailure(Call<List<Propriedade>> call, Throwable t) {
+
                         Log.e("onFailure", "Error");
+
                     }
                 });
             }

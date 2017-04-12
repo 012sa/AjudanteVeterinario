@@ -140,7 +140,8 @@ public class PerfilFazendaActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Call<List<Propriedade>> call = ServerConnection.getInstance().getService().inserirFazendaid(idpropriedade);
+                Call<List<Propriedade>> call = ServerConnection
+                        .getInstance().getService().inserirFazendaid(idpropriedade);
 
                 Log.i(this.getClass().getName(), "Calling list");
 
