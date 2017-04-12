@@ -37,10 +37,9 @@ public class ListarFazendaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_fazenda);
 
-        fazenda_lista = (ListView) view.findViewById(R.id.ListViewFazendas);
+        fazenda_lista = (ListView) findViewById(R.id.ListViewFazendaslf);
         propriedade = new ArrayList<Propriedade>();
         fazendaArrayAdapter = new ArrayAdapter<Propriedade>(this, android.R.layout.simple_list_item_activated_1, propriedade);
-
         fazenda_lista.setAdapter(fazendaArrayAdapter);
 
 

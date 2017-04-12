@@ -1,4 +1,5 @@
 package com.example.sarah.ajudanteveterinarioandroid.Network;
+import com.example.sarah.ajudanteveterinarioandroid.Entity.Animal;
 import com.example.sarah.ajudanteveterinarioandroid.Entity.Propriedade;
 
 import java.util.List;
@@ -15,19 +16,34 @@ import retrofit2.http.Path;
 
 public interface APIService {
 
-    @GET("PropriedadeController/id/{id}")
-    Call<Propriedade> inserirFazenda(@Path("id") int id);
+    @GET("controller/PropriedadeController/id/{id}")
+    Call<List<Propriedade>> inserirFazendaid(@Path("id") int id);
 
-    @GET("PropriedadeController/listar")
+    @GET("controller/PropriedadeController/listar")
     Call<List<Propriedade>> getFazendas();
 
-    @POST("PropriedadeController/inserir")
+    @POST("controller/PropriedadeController/inserir")
     Call<Propriedade> inserirFazenda(@Body Propriedade propriedade);
 
-    @POST("PropriedadeController/deletar")
+    @POST("controller/PropriedadeController/deletar")
     Call<Propriedade> deletarFazenda(@Body Propriedade propriedade);
 
-    @POST("PropriedadeController/alterar")
+    @POST("controller/PropriedadeController/alterar")
     Call<Propriedade> alterarFazenda(@Body Propriedade propriedade);
+
+    @GET("controller/AnimalController/inserir")
+    Call<Animal> inserirAnimal(@Body Animal animal);
+
+    @GET("controller/AnimalController/listar")
+    Call<List<Animal>> listarAnimal(@Body Animal animal);
+
+    @GET("controller/AnimalController/id/{id}")
+    Call<Animal>inserirAnimalid(@Path("id") int id) ;
+
+    @POST("controller/AnimalController/deletar")
+    Call<Animal> deletarAnimal(@Body Animal animal);
+
+    @POST("controller/AnimalController/alterar")
+    Call<Animal> alteraarAnimal(@Body Animal animal);
 
 }

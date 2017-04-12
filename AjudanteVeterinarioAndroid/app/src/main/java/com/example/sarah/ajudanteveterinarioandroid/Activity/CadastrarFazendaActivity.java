@@ -18,6 +18,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.R.attr.id;
+
 public class CadastrarFazendaActivity extends AppCompatActivity {
 
     @BindView(R.id.floatingActionButtonAdicionarFazenda) FloatingActionButton fbaddfazenda;
@@ -42,8 +44,7 @@ public class CadastrarFazendaActivity extends AppCompatActivity {
         fbaddfazenda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //codico para --> add no banco
-                //a propriedade
+
                 Intent ivlf = new Intent(CadastrarFazendaActivity.this, ListarFazendaActivity.class);
                 startActivity(ivlf);
                 final String propriedade, proprietario, email;
@@ -51,7 +52,7 @@ public class CadastrarFazendaActivity extends AppCompatActivity {
                 propriedade = etpropriedade.getText().toString();
                 proprietario = etproprietario.getText().toString();
                 email = etemail.getText().toString();
-                final Propriedade fazenda = new Propriedade(propriedade,proprietario,email);
+                final Propriedade fazenda = new Propriedade(id, propriedade,proprietario,email);
 
                 new Thread(new Runnable(){
 

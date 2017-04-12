@@ -22,9 +22,9 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="160dp"
         android:id="@+id/edittextProprietarioPF"
+        android:layout_marginBottom="70dp"
         android:layout_above="@+id/textViewPropriedade"
-        android:layout_alignEnd="@+id/floatingActionButtonAlterar"
-        android:layout_marginBottom="20dp" />
+        android:layout_alignStart="@+id/textViewProprietario" />
 
     <TextView
         android:id="@+id/textViewPropriedade"
@@ -34,7 +34,7 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="232dp"
         android:layout_above="@+id/edittextPropriedadePF"
-        android:layout_alignStart="@+id/edittextProprietarioPF" />
+        android:layout_alignStart="@+id/edittextPropriedadePF" />
 
     <android.support.design.widget.TextInputEditText
         android:layout_width="464dp"
@@ -42,9 +42,9 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="249dp"
         android:id="@+id/edittextPropriedadePF"
-        android:layout_marginBottom="33dp"
+        android:layout_marginBottom="93dp"
         android:layout_above="@+id/textViewEmail"
-        android:layout_alignParentStart="true" />
+        android:layout_alignStart="@+id/edittextProprietarioPF" />
 
     <TextView
         android:id="@+id/textViewEmail"

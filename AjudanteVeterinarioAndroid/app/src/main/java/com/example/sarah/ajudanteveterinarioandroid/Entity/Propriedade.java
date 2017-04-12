@@ -11,51 +11,69 @@ public class Propriedade {
     private String proprietario;
     private String email;
 
-    public Propriedade(String propriedade, String proprietario, String email) {
+    public Propriedade(Integer id, String propriedade, String proprietario, String email) {
+
         this.propriedade = propriedade;
         this.proprietario = proprietario;
         this.email = email;
+
     }
 
-    public static int getId() {
+    public int getId() {
+
         return id;
+
     }
 
     public void setId(int id) {
+
         this.id = id;
+
     }
 
     public String getPropriedade() {
+
         return propriedade;
+
     }
 
     public void setPropriedade(String propriedade) {
+
         this.propriedade = propriedade;
+
     }
 
     public String getProprietario() {
+
         return proprietario;
+
     }
 
     public void setProprietario(String proprietario) {
+
         this.proprietario = proprietario;
+
     }
 
     public String getEmail() {
+
         return email;
+
     }
 
     public void setEmail(String email) {
+
         this.email = email;
+
     }
 
     @Override
     public String toString() {
-        return "Propriedade{" +
-                "id=" + id +
-                ", propriedade='" + propriedade + '\'' +
-                ", proprietario='" + proprietario + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+
+        return "Propriedade{" + "id=" + id +
+                ", propriedade='" + propriedade  +
+                ", proprietario='" + proprietario +
+                ", email='" + email  + '}';
+
     }
 }

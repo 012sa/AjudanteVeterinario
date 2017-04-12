@@ -24,7 +24,8 @@
         <activity android:name=".Activity.ListarFazendaActivity" />
         <activity android:name=".Activity.TarefasMensaisActivity" />
         <activity android:name=".Activity.CadastrarFazendaActivity" />
-        <activity android:name=".Activity.PerfilFazendaActivity"></activity>
+        <activity android:name=".Activity.PerfilFazendaActivity" />
+        <activity android:name=".Activity.ListarAnimaisActivity"></activity>
     </application>
 
 </manifest>
