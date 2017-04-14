@@ -1,4 +1,4 @@
-package com.example.sarah.ajudanteveterinarioandroid.Network;
+package com.example.sarah.ajudanteveterinarioandroid.network;
 
 /**
  * Created by sarah on 09/04/2017.

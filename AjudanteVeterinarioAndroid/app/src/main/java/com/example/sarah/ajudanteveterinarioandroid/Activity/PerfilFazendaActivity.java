@@ -1,4 +1,4 @@
-package com.example.sarah.ajudanteveterinarioandroid.Activity;
+package com.example.sarah.ajudanteveterinarioandroid.activity;
 
 import android.content.Intent;
 
@@ -15,8 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.sarah.ajudanteveterinarioandroid.Entity.Propriedade;
-import com.example.sarah.ajudanteveterinarioandroid.Network.ServerConnection;
+import com.example.sarah.ajudanteveterinarioandroid.entity.Propriedade;
+import com.example.sarah.ajudanteveterinarioandroid.network.ServerConnection;
 import com.example.sarah.ajudanteveterinarioandroid.R;
 
 import java.util.List;

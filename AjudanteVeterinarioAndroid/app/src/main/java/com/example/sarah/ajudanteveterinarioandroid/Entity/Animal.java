@@ -1,6 +1,4 @@
-package com.example.sarah.ajudanteveterinarioandroid.Entity;
-
-import java.security.PrivateKey;
+package com.example.sarah.ajudanteveterinarioandroid.entity;
 
 /**
  * Created by sarah on 11/04/2017.

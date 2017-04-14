@@ -1,4 +1,4 @@
-package com.example.sarah.ajudanteveterinarioandroid.Activity;
+package com.example.sarah.ajudanteveterinarioandroid.activity;
 
 import android.content.Intent;
 
@@ -15,8 +15,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.sarah.ajudanteveterinarioandroid.Entity.Animal;
-import com.example.sarah.ajudanteveterinarioandroid.Network.ServerConnection;
+import com.example.sarah.ajudanteveterinarioandroid.entity.Animal;
+import com.example.sarah.ajudanteveterinarioandroid.network.ServerConnection;
 import com.example.sarah.ajudanteveterinarioandroid.R;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.sarah.ajudanteveterinarioandroid.Activity;
+package com.example.sarah.ajudanteveterinarioandroid.activity;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.sarah.ajudanteveterinarioandroid.R;
-
-import static android.R.attr.button;
 
 public class MainActivity extends AppCompatActivity {
 

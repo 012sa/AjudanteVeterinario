@@ -1,4 +1,4 @@
-package com.example.sarah.ajudanteveterinarioandroid.Entity;
+package com.example.sarah.ajudanteveterinarioandroid.entity;
 
 /**
  * Created by sarah on 09/04/2017.

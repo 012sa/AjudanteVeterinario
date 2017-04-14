@@ -1,6 +1,5 @@
-package com.example.sarah.ajudanteveterinarioandroid.Activity;
+package com.example.sarah.ajudanteveterinarioandroid.activity;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;

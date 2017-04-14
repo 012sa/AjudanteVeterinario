@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sarah.ajudanteveterinarioandroid.Activity.PerfilFazendaActivity">
+    tools:context="com.example.sarah.ajudanteveterinarioandroid.activity.PerfilFazendaActivity">
 
     <TextView
         android:id="@+id/textViewProprietario"

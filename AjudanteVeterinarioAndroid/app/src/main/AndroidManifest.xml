@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,14 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainActivity" />
-        <activity android:name=".Activity.ListarFazendaActivity" />
-        <activity android:name=".Activity.TarefasMensaisActivity" />
-        <activity android:name=".Activity.CadastrarFazendaActivity" />
-        <activity android:name=".Activity.PerfilFazendaActivity" />
-        <activity android:name=".Activity.ListarAnimaisActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.ListarFazendaActivity" />
+        <activity android:name=".activity.TarefasMensaisActivity" />
+        <activity android:name=".activity.CadastrarFazendaActivity" />
+        <activity android:name=".activity.PerfilFazendaActivity" />
+        <activity android:name=".activity.ListarAnimaisActivity" />
         <activity
-            android:name=".Activity.PerfilAnimalActivity"
+            android:name=".activity.PerfilAnimalActivity"
             android:label="@string/title_activity_perfil_animal"
             android:theme="@style/AppTheme"></activity>
     </application>
