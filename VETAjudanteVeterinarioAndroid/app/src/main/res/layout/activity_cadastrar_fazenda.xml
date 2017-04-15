@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sarah.vetajudanteveterinarioandroid.activity.CadastrarFazendaActivity">
+
+    <TextView
+        android:id="@+id/textViewProprietario"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name_of_owner"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="143dp"
+        android:layout_marginTop="151dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/edittextProprietario"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_of_owner"
+        android:layout_below="@+id/textViewProprietario"
+        android:layout_alignStart="@+id/textViewProprietario" />
+
+
+    <TextView
+        android:id="@+id/textViewPropriedade"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name_of_farm"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="232dp"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/edittextProprietario"
+        android:layout_alignStart="@+id/edittextProprietario" />
+
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/edittextPropriedade"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_of_owner"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="249dp"
+        android:layout_below="@+id/textViewPropriedade"
+        android:layout_alignStart="@+id/textViewPropriedade" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_email"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="326dp"
+        android:layout_below="@+id/edittextPropriedade"
+        android:layout_alignStart="@+id/edittextPropriedade"
+        android:layout_marginTop="40dp" />
+
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/edittextEmail"
+        android:layout_width="464dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/prompt_email"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="343dp"
+        android:layout_below="@+id/textViewEmail"
+        android:layout_alignStart="@+id/textViewEmail" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonAdicionarFazenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tint="@color/colorPrimaryLight"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_add_black_48dp"
+        tools:layout_editor_absoluteX="424dp"
+        tools:layout_editor_absoluteY="719dp"
+        android:layout_alignTop="@+id/floatingActionButtonVoltarMenuCF"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonVoltarMenuCF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tint="@color/colorPrimaryLight"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_keyboard_backspace_black_48dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="719dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/edittextEmail"
+        android:layout_marginBottom="35dp" />
+
+</RelativeLayout>
