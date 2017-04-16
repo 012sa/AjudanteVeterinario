@@ -25,7 +25,7 @@ import retrofit2.Response;
 
 public class ListarAnimaisActivity extends AppCompatActivity {
 
-    String propriedadenm;
+    Integer propriedadeid;
     //@BindView(R.id.spinnerLA) Spinner spinneranimal;
     Spinner spinneranimal= (Spinner) findViewById(R.id.spinnerLA);
     //@BindView(R.id.ListViewAnimaisLA) ListView animal_lista;
@@ -41,8 +41,9 @@ public class ListarAnimaisActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_animais);
+
         Intent intent = getIntent();
-        propriedadenm = (String) intent.getStringExtra("Propriedadeid");
+        propriedadeid = (Integer) Integer.parseInt(intent.getStringExtra("Propriedadeid"));
         animais = new ArrayList<Animal>();
         animalArrayAdapter = new ArrayAdapter<Animal>(this, android.R.layout.simple_list_item_activated_1, animais);
         adapter = new ArrayAdapter<Animal>(this, android.R.layout.simple_spinner_item, animais);
@@ -69,7 +70,7 @@ public class ListarAnimaisActivity extends AppCompatActivity {
 
                 Intent ica = new Intent(ListarAnimaisActivity.this, MainActivity.class);
                 startActivity(ica);
-                ica.putExtra("propriedade", propriedadenm);
+                ica.putExtra("propriedade", propriedadeid);
 
             }
         });
@@ -83,7 +84,7 @@ public class ListarAnimaisActivity extends AppCompatActivity {
                 startActivity(ipaa);
                 Integer idanimal = (int) id;
                 ipaa.putExtra("id", idanimal);
-                ipaa.putExtra("propriedade",propriedadenm);
+                ipaa.putExtra("propriedade",propriedadeid);
 
             }
 
@@ -101,7 +102,7 @@ public class ListarAnimaisActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Call<List<Animal>> call = ConnectionServer.getInstance().getService().getAnimalPropriedade(propriedadenm);
+                Call<List<Animal>> call = ConnectionServer.getInstance().getService().getAnimalPropriedade(propriedadeid);
 
                 Log.i(this.getClass().getName(), "Calling list");
 
@@ -151,7 +152,7 @@ public class ListarAnimaisActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Call<List<Animal>> call = ConnectionServer.getInstance().getService().getAnimalPropriedade(propriedadenm);
+                Call<List<Animal>> call = ConnectionServer.getInstance().getService().getAnimalPropriedade(propriedadeid);
 
                 Log.i(this.getClass().getName(), "Calling list");
 

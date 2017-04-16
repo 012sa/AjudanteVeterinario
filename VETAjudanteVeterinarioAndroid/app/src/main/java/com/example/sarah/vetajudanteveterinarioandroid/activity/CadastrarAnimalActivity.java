@@ -3,9 +3,12 @@ package com.example.sarah.vetajudanteveterinarioandroid.activity;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
+
 import android.view.View;
+
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,7 +18,8 @@ import com.example.sarah.vetajudanteveterinarioandroid.network.ConnectionServer;
 
 import java.util.List;
 
-import butterknife.BindView;
+//import butterknife.BindView;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,7 +41,7 @@ public class CadastrarAnimalActivity extends AppCompatActivity {
     //@BindView(R.id.editTextClassificacaoCA) EditText etcalssificacao;
     EditText etcalssificacao = (EditText) findViewById(R.id.editTextClassificacaoCA);
     List<Animal> listanimal;
-    String propriedadenm;
+    int propriedadeid;
     Animal animal;
     //@BindView(R.id.floatingActionButtonCadastrarAnimalCA) FloatingActionButton fbaddanimal;
     FloatingActionButton fbaddanimal = (FloatingActionButton) findViewById(R.id.floatingActionButtonCadastrarAnimalCA);
@@ -48,7 +52,7 @@ public class CadastrarAnimalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_animal);
         Intent intent = getIntent();
-        propriedadenm = intent.getStringExtra("propriedade");
+        propriedadeid = Integer.parseInt(intent.getStringExtra("propriedade"));
         
         fbvoltarmenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +76,7 @@ public class CadastrarAnimalActivity extends AppCompatActivity {
                 sexo = etsexo.getText().toString();
                 mae = etmae.getText().toString();
                 classificacao = etcalssificacao.getText().toString();
-                final Animal anima = new Animal(nome,raca,idade,tipo,sexo,mae,classificacao,propriedadenm);
+                final Animal anima = new Animal(nome,raca,idade,tipo,sexo,mae,classificacao,propriedadeid);
                 
                 new Thread(new Runnable() {
                     @Override

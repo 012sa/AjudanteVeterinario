@@ -40,9 +40,8 @@ public interface APIService {
     @GET("AnimalController/listar")
     Call<List<Animal>> getAnimal();
 
-    //FALTA NO SERVICE - DEPOIS IMPLEMTENTAR
-    @GET("AnimalController/propriedade/{propriedade}")
-    Call<List<Animal>> getAnimalPropriedade(@Path("propriedade") String propriedade);
+    @GET("AnimalController/listar/id_Propriedade/{id_Propriedade}")
+    Call<List<Animal>> getAnimalPropriedade(@Path("propriedadeid") int propriedadeid);
 
     @GET("AnimalController/id/{id}")
     Call<Animal>Animalid(@Path("id") int id) ;

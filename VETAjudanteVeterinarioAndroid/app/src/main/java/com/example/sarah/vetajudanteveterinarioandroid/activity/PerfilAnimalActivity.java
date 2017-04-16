@@ -2,11 +2,14 @@ package com.example.sarah.vetajudanteveterinarioandroid.activity;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+
 import android.util.Log;
+
 import android.view.View;
+
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -16,7 +19,8 @@ import com.example.sarah.vetajudanteveterinarioandroid.network.ConnectionServer;
 
 import java.util.List;
 
-import butterknife.BindView;
+//import butterknife.BindView;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -25,8 +29,7 @@ import static java.lang.Integer.parseInt;
 
 public class PerfilAnimalActivity extends AppCompatActivity {
 
-    Integer idanimal;
-    String nmpropriedade;
+    Integer idanimal, propriedadeid;
     //@BindView(R.id.editTextIdadeCA) EditText etidade;
     EditText etidade = (EditText) findViewById(R.id.editTextIdadeCA);
     //@BindView (R.id.editTextNomeCA) EditText etnome;
@@ -50,9 +53,10 @@ public class PerfilAnimalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_animal);
+
         Intent intent = getIntent();
         idanimal=Integer.parseInt(intent.getStringExtra("id"));
-        nmpropriedade = intent.getStringExtra("propriedade");
+        propriedadeid = Integer.parseInt(intent.getStringExtra("propriedade"));
 
         preencheredittexts();
 
@@ -77,7 +81,7 @@ public class PerfilAnimalActivity extends AppCompatActivity {
                 final String nmclassificacao =etclassificacao.getText().toString();
 
                 final Animal anima = new Animal(idanimal, nmraca, nmclassificacao, nmmae, nmtipo,
-                        nmsexo, nmnome, intidade,nmpropriedade);
+                        nmsexo, nmnome, intidade,propriedadeid);
 
                 new Thread(new Runnable() {
                     @Override
@@ -97,32 +101,21 @@ public class PerfilAnimalActivity extends AppCompatActivity {
                                                 +" Alterada!", Toast.LENGTH_SHORT).show();
 
                                     }else{
-
                                         Log.e(this.getClass().toString(), "Error on calling" + response.code());
-
                                     }
-
                                 }catch(Exception e){
-
                                     Log.e(this.getClass().toString(), e.getMessage().toString());
-
                                 }
-
                             }
-
                             @Override
                             public void onFailure(Call<Animal> call, Throwable t) {
-
                                 Log.e(this.getClass().toString(), t.getMessage().toString());
-
                             }
                         });
                     }
                 });
-
             }
         });
-
     }
     public void preencheredittexts(){
         new Thread(new Runnable() {
@@ -150,25 +143,27 @@ public class PerfilAnimalActivity extends AppCompatActivity {
                                 etipo.setText(animal.getTipo().toString());
                                 etsexo.setText(animal.getSexo().toString());
                                 etmae.setText(animal.getMae().toString());
+
                             } else {
+
                                 Log.e(this.getClass().toString(), "Error on Calling");
+
                             }
                         }catch (Exception e){
+
                             Log.e(this.getClass().toString(), "Error on Calling");
+
                         }
                     }
                     @Override
                     public void onFailure(Call<Animal> call, Throwable t) {
+
                         Log.e(this.getClass().toString(), "Error on Calling");
+
                     }
                 });
-
             }
 
         }).start();
-
     }
 }
-
-
-
