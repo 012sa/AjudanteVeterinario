@@ -42,7 +42,14 @@
         android:layout_marginLeft="62dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="36dp"
-        android:layout_alignBottom="@+id/floatingActionButtonVoltarMenuLF"
+        android:layout_below="@+id/spinnerLF"
         android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/spinnerLF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/button" />
 
 </RelativeLayout>

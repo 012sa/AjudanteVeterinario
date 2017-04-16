@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ConnectionServer {
 
     private static final String URL_BASES = "http://192.168.0.24:8079/RestEasyApp/";
-
+    //QUEM FOR TENTAR COMPILAR PORFAVOR MUDE O IP
 
     private static APIService service;
     private static ConnectionServer ourInstance = new ConnectionServer();

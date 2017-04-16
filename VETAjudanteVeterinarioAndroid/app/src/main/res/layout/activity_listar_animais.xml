@@ -10,20 +10,47 @@
         android:id="@+id/floatingActionButtonVoltarMenuLA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="37dp"
-        android:layout_marginEnd="44dp"
         android:clickable="true"
-        android:tint="@android:color/background_light"
+        android:tint="@color/colorPrimaryLight"
         app:fabSize="mini"
-        app:srcCompat="@drawable/ic_keyboard_backspace_black_48dp" />
+        app:srcCompat="@drawable/ic_keyboard_backspace_black_48dp"
+        tools:layout_editor_absoluteX="424dp"
+        tools:layout_editor_absoluteY="664dp"
+        android:layout_alignTop="@+id/floatingActionButtonAddAnimalLA"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonAddAnimalLA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tint="@color/colorPrimaryLight"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_add_black_48dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="664dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
     <ListView
+        android:id="@+id/ListViewAnimaisLA"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/ListViewAnimais"
+        android:layout_marginLeft="62dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="36dp"
+        android:layout_below="@+id/spinnerLA"
+        android:layout_toEndOf="@+id/floatingActionButtonVoltarMenuLA"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/spinnerLA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

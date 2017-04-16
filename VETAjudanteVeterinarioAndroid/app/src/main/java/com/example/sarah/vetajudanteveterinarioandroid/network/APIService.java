@@ -38,13 +38,14 @@ public interface APIService {
     Call<Animal> inserirAnimal(@Body Animal animal);
 
     @GET("AnimalController/listar")
-    Call<List<Animal>> listarAnimal(@Body Animal animal);
-
-    @GET("AnimalController/listar")
     Call<List<Animal>> getAnimal();
 
-    @GET("AnimalController/id/{id}")//ESSE ID É DA FAZENDA
-    Call<Animal>inserirAnimalid(@Path("id") int id) ;
+    //FALTA NO SERVICE - DEPOIS IMPLEMTENTAR
+    @GET("AnimalController/propriedade/{propriedade}")
+    Call<List<Animal>> getAnimalPropriedade(@Path("propriedade") String propriedade);
+
+    @GET("AnimalController/id/{id}")
+    Call<Animal>Animalid(@Path("id") int id) ;
 
     @POST("AnimalController/deletar")
     Call<Animal> deletarAnimal(@Body Animal animal);

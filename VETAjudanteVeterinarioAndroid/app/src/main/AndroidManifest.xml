@@ -26,7 +26,9 @@
         <activity android:name=".activity.ListarAnimaisActivity" />
         <activity android:name=".activity.ListarFazendaActivity" />
         <activity android:name=".activity.PerfilAnimalActivity" />
-        <activity android:name=".activity.PerfilFazendaActivity"></activity>
+        <activity android:name=".activity.PerfilFazendaActivity" />
+        <activity android:name=".activity.ControleReprodutivoActivity" />
+        <activity android:name=".activity.CadastrarAnimalActivity"></activity>
     </application>
 
 </manifest>

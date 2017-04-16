@@ -13,11 +13,19 @@ public class Animal {
     private String tipo;
     private String sexo;
     private String nome;
-    private String pais;
     private int idade;
+    private String propriedade;
+
+    public String getPropriedade() {
+        return propriedade;
+    }
+
+    public void setPropriedade(String propriedade) {
+        this.propriedade = propriedade;
+    }
 
     public Animal(Integer id, String raca, String classificacao, String mae, String tipo,
-                  String sexo, String nome, String pais, Integer idade){
+                  String sexo, String nome, Integer idade, String propriedade){
         this.id = id;
         this.raca = raca;
         this.classificacao = classificacao;
@@ -25,10 +33,14 @@ public class Animal {
         this.tipo = tipo;
         this.sexo = sexo;
         this.mae = mae;
-        this.pais = pais;
         this.idade = idade;
+        this.propriedade = propriedade;
 
     }
+
+    public Animal(String nome, String raca, String idade, String tipo, String sexo, String mae, String classificacao, String propriedadenm) {
+    }
+
 
     public int getId() {
         return id;
@@ -84,14 +96,6 @@ public class Animal {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
     }
 
     public int getIdade() {
