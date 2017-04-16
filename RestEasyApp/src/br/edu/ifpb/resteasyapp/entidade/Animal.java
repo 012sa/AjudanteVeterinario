@@ -1,10 +1,12 @@
 package br.edu.ifpb.resteasyapp.entidade;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,6 +58,9 @@ public class Animal {
 
 	@Column(name = "idade")
 	private int idade;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Propriedade propriedade;
 
 	@XmlElement
 	public int getId() {
@@ -127,6 +132,14 @@ public class Animal {
 
 	public void setIdade(int idade) {
 		this.idade = idade;
+	}
+
+	public Propriedade getPropriedade() {
+		return propriedade;
+	}
+
+	public void setPropriedade(Propriedade propriedade) {
+		this.propriedade = propriedade;
 	}
 
 	@Override

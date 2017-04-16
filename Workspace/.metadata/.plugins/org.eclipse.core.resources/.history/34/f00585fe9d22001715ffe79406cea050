@@ -1,0 +1,61 @@
+package br.edu.ifpb.resteasyapp.dao;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+
+import br.edu.ifpb.resteasyapp.entidade.Animal;
+import br.edu.ifpb.resteasyapp.hibernate.HibernateUtil;
+
+
+public class AnimalDAO extends GenericDao<Integer, Animal>{
+
+	private static AnimalDAO instance;
+	
+	public static AnimalDAO getInstance() {		
+		instance = new AnimalDAO();		
+		return instance;
+	}
+	
+	@Override
+	public List<Animal> getAll() throws SQLException {
+		return super.getAll("Animal.getAll");
+	}
+
+	@Override
+	public Class<?> getEntityClass() {
+		return Animal.class;
+	}
+
+	@Override
+	public Animal find(Animal entity) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public List<Animal> getAllAnimaisByPropriedade (int id) throws SQLException {
+		
+Session session = HibernateUtil.getSessionFactory().openSession();
+		
+		List<Animal> animais = new ArrayList<Animal>();
+		
+		try {
+			
+			String hql = "select a from Animal a where a.propriedade.id = :id";
+			Query query = session.createQuery(hql);
+			query.setParameter("id", id);
+			animais = (List<Animal>) query.list();
+			
+		} catch (HibernateException hibernateException){
+			
+			session.getTransaction().rollback();
+			
+			throw new SQLException(hibernateException);
+			
+		}
+		
+	}
+}

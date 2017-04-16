@@ -15,10 +15,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
+import org.hibernate.Query;
+import org.hibernate.Session;
+
 import br.edu.ifpb.resteasyapp.dao.AnimalDAO;
 import br.edu.ifpb.resteasyapp.dao.PropriedadeDAO;
 import br.edu.ifpb.resteasyapp.entidade.Animal;
 import br.edu.ifpb.resteasyapp.entidade.Propriedade;
+import br.edu.ifpb.resteasyapp.hibernate.HibernateUtil;
 
 @Path("animal")
 public class AnimalController {
@@ -77,6 +81,34 @@ public class AnimalController {
 		}
 
 		// Será retornado ao cliente um conjunto de alunos no formato de Json.
+		return animais;
+	}
+
+	@PermitAll
+	@GET
+	@Path("/listar/id_Propriedade/{id_Propriedade}")
+	@Produces("application/json")
+	public List<Animal> getAllByPropriedade(@PathParam("id_Propriedade") int id){
+		
+		List<Animal> animais = new ArrayList<Animal>();
+		
+		try {
+			
+			if (id == 0){
+			
+				return null;
+			
+			}
+			
+			else {
+				
+				animais = AnimalDAO.getInstance().getAllAnimaisByPropriedade(id);
+				
+			}
+		} catch (SQLException e){
+			
+		}
+		
 		return animais;
 	}
 
