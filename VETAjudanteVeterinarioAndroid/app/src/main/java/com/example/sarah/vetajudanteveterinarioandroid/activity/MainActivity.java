@@ -1,10 +1,14 @@
 package com.example.sarah.vetajudanteveterinarioandroid.activity;
 
 import android.content.Intent;
+
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+
 import android.view.View;
+
 import android.widget.Button;
 
 import com.example.sarah.vetajudanteveterinarioandroid.R;
@@ -12,12 +16,13 @@ import com.example.sarah.vetajudanteveterinarioandroid.R;
 import butterknife.BindView;
 
 public class MainActivity extends AppCompatActivity {
-    @BindView (R.id.irFazenda) Button bfazendas;
+    //@BindView (R.id.irFazendaMA) Button bfazendas;
+    //@BindView(R.id.floatingActionButtonSairMA) FloatingActionButton fbsair;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Button bfazendas= (Button) findViewById(R.id.irFazendaMA);
         bfazendas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,9 +30,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(iFarm);
             }
         });
-
-        FloatingActionButton saida = (FloatingActionButton) findViewById(R.id.floatingActionButtonSair);
-        saida.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fbsair = (FloatingActionButton) findViewById(R.id.floatingActionButtonSairMA);
+        fbsair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

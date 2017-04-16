@@ -26,10 +26,14 @@ import retrofit2.Response;
 public class ListarAnimaisActivity extends AppCompatActivity {
 
     String propriedadenm;
-    @BindView(R.id.spinnerLA) Spinner spinneranimal;
-    @BindView(R.id.ListViewAnimaisLA) ListView animal_lista;
-    @BindView(R.id.floatingActionButtonAddAnimalLA) FloatingActionButton fbaddanimal;
-    @BindView(R.id.floatingActionButtonVoltarMenuLA) FloatingActionButton fbvoltarmenu;
+    //@BindView(R.id.spinnerLA) Spinner spinneranimal;
+    Spinner spinneranimal= (Spinner) findViewById(R.id.spinnerLA);
+    //@BindView(R.id.ListViewAnimaisLA) ListView animal_lista;
+    ListView animal_lista = (ListView) findViewById(R.id.ListViewAnimaisLA);
+    //@BindView(R.id.floatingActionButtonAddAnimalLA) FloatingActionButton fbaddanimal;
+    FloatingActionButton fbaddanimal = (FloatingActionButton) findViewById(R.id.floatingActionButtonAddAnimalLA);
+    //@BindView(R.id.floatingActionButtonVoltarMenuLA) FloatingActionButton fbvoltarmenu;
+    FloatingActionButton fbvoltarmenu = (FloatingActionButton) findViewById(R.id.floatingActionButtonVoltarMenuLA);
     ArrayAdapter<Animal> animalArrayAdapter, adapter;
     List<Animal> animais;
 

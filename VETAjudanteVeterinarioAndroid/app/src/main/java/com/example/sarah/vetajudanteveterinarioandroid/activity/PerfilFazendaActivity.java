@@ -27,12 +27,18 @@ import static java.lang.Integer.parseInt;
 public class PerfilFazendaActivity extends AppCompatActivity {
 
     String proprieda;
-    @BindView(R.id.edittextPropriedadePF) EditText etpropriedade;
-    @BindView(R.id.edittextProprietarioPF) EditText etproprietario;
-    @BindView(R.id.edittextEmailPF) EditText etemail;
-    @BindView(R.id.floatingActionButtonVoltarMenuPF) FloatingActionButton fbvoltarmenu;
-    @BindView(R.id.floatingActionButtonAlterar) FloatingActionButton fbalterar;
-    @BindView(R.id.buttonIrAosAnimais) Button banimal;
+    //@BindView(R.id.edittextPropriedadePF) EditText etpropriedade;
+    EditText etpropriedade = (EditText) findViewById(R.id.edittextPropriedadePF);
+    //@BindView(R.id.edittextProprietarioPF) EditText etproprietario;
+    EditText etproprietario = (EditText) findViewById(R.id.edittextProprietarioPF);
+    //@BindView(R.id.edittextEmailPF) EditText etemail;
+    EditText etemail = (EditText) findViewById(R.id.edittextEmailPF);
+    //@BindView(R.id.floatingActionButtonVoltarMenuPF) FloatingActionButton fbvoltarmenu;
+    FloatingActionButton fbvoltarmenu = (FloatingActionButton) findViewById(R.id.floatingActionButtonVoltarMenuPF);
+    //@BindView(R.id.floatingActionButtonAlterar) FloatingActionButton fbalterar;
+    FloatingActionButton fbalterar = (FloatingActionButton) findViewById(R.id.floatingActionButtonAlterar);
+    //@BindView(R.id.buttonIrAosAnimais) Button banimal;
+    Button banimal = (Button) findViewById(R.id.buttonIrAosAnimais);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -22,11 +22,16 @@ import static android.R.attr.id;
 
 public class CadastrarFazendaActivity extends AppCompatActivity {
 
-    @BindView(R.id.floatingActionButtonAdicionarFazenda) FloatingActionButton fbaddfazenda;
-    @BindView(R.id.floatingActionButtonVoltarMenuCF) FloatingActionButton fbvoltarmenu;
-    @BindView(R.id.edittextProprietario) EditText etproprietario;
-    @BindView(R.id.edittextPropriedade) EditText etpropriedade;
-    @BindView(R.id.edittextEmail) EditText etemail;
+    //@BindView(R.id.floatingActionButtonAdicionarFazenda) FloatingActionButton fbaddfazenda;
+    FloatingActionButton fbaddfazenda = (FloatingActionButton) findViewById(R.id.floatingActionButtonAdicionarFazenda);
+    //@BindView(R.id.floatingActionButtonVoltarMenuCF) FloatingActionButton fbvoltarmenu;
+    FloatingActionButton fbvoltarmenu = (FloatingActionButton) findViewById(R.id.floatingActionButtonVoltarMenuCF);
+    //@BindView(R.id.edittextProprietario) EditText etproprietario;
+    EditText etproprietario = (EditText) findViewById(R.id.edittextProprietario);
+    //@BindView(R.id.edittextPropriedade) EditText etpropriedade;
+    EditText etpropriedade = (EditText) findViewById(R.id.edittextPropriedade);
+    //@BindView(R.id.edittextEmail) EditText etemail;
+    EditText etemail = (EditText) findViewById(R.id.edittextEmail);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

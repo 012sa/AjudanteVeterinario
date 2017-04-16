@@ -22,19 +22,27 @@ import retrofit2.Response;
 
 public class CadastrarAnimalActivity extends AppCompatActivity {
 
-    @BindView(R.id.editTextNomeCA) EditText etnome;
-    @BindView(R.id.editTextRacaCA) EditText etraca;
-    @BindView(R.id.editTextIdadeCA) EditText etidade;
-    @BindView(R.id.editTextTipoCA) EditText ettipo;
-    @BindView(R.id.editTextSexoCA) EditText etsexo;
-    @BindView(R.id.editTextMaeCA) EditText etmae;
-    @BindView(R.id.editTextClassificacaoCA) EditText etcalssificacao;
+    //@BindView(R.id.editTextNomeCA) EditText etnome;
+    EditText etnome = (EditText) findViewById(R.id.editTextNomeCA);
+    //@BindView(R.id.editTextRacaCA) EditText etraca;
+    EditText etraca = (EditText) findViewById(R.id.editTextRacaCA);
+    //@BindView(R.id.editTextIdadeCA) EditText etidade;
+    EditText etidade = (EditText) findViewById(R.id.editTextIdadeCA);
+    //@BindView(R.id.editTextTipoCA) EditText ettipo;
+    EditText ettipo = (EditText) findViewById(R.id.editTextTipoCA);
+    //@BindView(R.id.editTextSexoCA) EditText etsexo;
+    EditText etsexo = (EditText) findViewById(R.id.editTextSexoCA   );
+    //@BindView(R.id.editTextMaeCA) EditText etmae;
+    EditText etmae = (EditText) findViewById(R.id.editTextMaeCA);
+    //@BindView(R.id.editTextClassificacaoCA) EditText etcalssificacao;
+    EditText etcalssificacao = (EditText) findViewById(R.id.editTextClassificacaoCA);
     List<Animal> listanimal;
     String propriedadenm;
     Animal animal;
-    @BindView(R.id.floatingActionButtonCadastrarAnimalCA) FloatingActionButton fbaddanimal;
-    @BindView(R.id.floatingActionButtonVoltarMenuCA) FloatingActionButton fbvoltarmenu;
-    
+    //@BindView(R.id.floatingActionButtonCadastrarAnimalCA) FloatingActionButton fbaddanimal;
+    FloatingActionButton fbaddanimal = (FloatingActionButton) findViewById(R.id.floatingActionButtonCadastrarAnimalCA);
+    //@BindView(R.id.floatingActionButtonVoltarMenuCA) FloatingActionButton fbvoltarmenu;
+    FloatingActionButton fbvoltarmenu=(FloatingActionButton) findViewById(R.id.floatingActionButtonVoltarMenuCA);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

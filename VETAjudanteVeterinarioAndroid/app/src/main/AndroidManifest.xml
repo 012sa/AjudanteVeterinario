@@ -9,7 +9,7 @@
         android:allowBackup="true"
         android:icon="@drawable/cow_icon"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/cow_icon"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -27,7 +27,6 @@
         <activity android:name=".activity.ListarFazendaActivity" />
         <activity android:name=".activity.PerfilAnimalActivity" />
         <activity android:name=".activity.PerfilFazendaActivity" />
-        <activity android:name=".activity.ControleReprodutivoActivity" />
         <activity android:name=".activity.CadastrarAnimalActivity"></activity>
     </application>
 

@@ -30,9 +30,12 @@ import static com.example.sarah.vetajudanteveterinarioandroid.R.id.parent;
 
 public class ListarFazendaActivity extends AppCompatActivity {
 
-    @BindView(R.id.floatingActionButtonVoltarMenuLF)FloatingActionButton fbvoltarmenu;
-    @BindView (R.id.ListViewFazendaslf)ListView lvFazendas;
-    @BindView(R.id.spinnerLF)Spinner sfazendas;
+    //@BindView(R.id.floatingActionButtonVoltarMenuLF)FloatingActionButton fbvoltarmenu;
+    FloatingActionButton fbvoltarmenu = (FloatingActionButton) findViewById(R.id.floatingActionButtonVoltarMenuLF);
+    //@BindView (R.id.ListViewFazendaslf)ListView lvFazendas;
+    ListView lvFazendas = (ListView) findViewById(R.id.ListViewFazendaslf);
+    //@BindView(R.id.spinnerLF)Spinner sfazendas;
+    Spinner sfazendas = (Spinner) findViewById(R.id.spinnerLF);
     ArrayAdapter<Propriedade> adapter;
     ArrayAdapter<Propriedade> adapterspinner;
     List<Propriedade> propriedades;

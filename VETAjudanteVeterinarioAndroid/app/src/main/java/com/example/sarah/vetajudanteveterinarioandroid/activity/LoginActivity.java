@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        // Set up the login form.
+
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         mPasswordView = (EditText) findViewById(R.id.password);
         final Button mSignInButton = (Button) findViewById(R.id.email_sign_in_button);
@@ -54,14 +54,8 @@ public class LoginActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-                // Stores User name
-                //mudar quando a url for liberada
                 String username = String.valueOf(mEmailView.getText());
-                // Stores Password
                 String password = String.valueOf(mPasswordView.getText());
-
-                // Validates the User name and Password for admin, admin
-
                 if (username.equals("admin") && password.equals("admin")){
                     Intent i = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(i);

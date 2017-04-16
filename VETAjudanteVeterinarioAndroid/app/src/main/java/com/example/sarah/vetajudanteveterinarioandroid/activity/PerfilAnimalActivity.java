@@ -27,15 +27,24 @@ public class PerfilAnimalActivity extends AppCompatActivity {
 
     Integer idanimal;
     String nmpropriedade;
-    @BindView(R.id.editTextIdadeCA) EditText etidade;
-    @BindView (R.id.editTextNomeCA) EditText etnome;
-    @BindView (R.id.editTextRacaCA) EditText etraca;
-    @BindView (R.id.editTextTipoCA) EditText etipo;
-    @BindView(R.id.editTextClassificacaoCA) EditText etclassificacao;
-    @BindView (R.id.editTextSexoCA) EditText etsexo;
-    @BindView (R.id.editTextMaeCA) EditText etmae;
-    @BindView(R.id.floatingActionButtonVoltarMenuPA) FloatingActionButton fbvoltarmenu;
-    @BindView(R.id.floatingActionButtonAlterarAnimal) FloatingActionButton fbalterar;
+    //@BindView(R.id.editTextIdadeCA) EditText etidade;
+    EditText etidade = (EditText) findViewById(R.id.editTextIdadeCA);
+    //@BindView (R.id.editTextNomeCA) EditText etnome;
+    EditText etnome = (EditText) findViewById(R.id.editTextNomeCA);
+    //@BindView (R.id.editTextRacaCA) EditText etraca;
+    EditText etraca = (EditText) findViewById(R.id.editTextRacaCA);
+    //@BindView (R.id.editTextTipoCA) EditText etipo;
+    EditText etipo = (EditText) findViewById(R.id.editTextTipoCA);
+    //@BindView(R.id.editTextClassificacaoCA) EditText etclassificacao;
+    EditText etclassificacao = (EditText) findViewById(R.id.editTextClassificacaoCA);
+    //@BindView (R.id.editTextSexoCA) EditText etsexo;
+    EditText etsexo = (EditText) findViewById(R.id.editTextSexoCA);
+    //@BindView (R.id.editTextMaeCA) EditText etmae;
+    EditText etmae =(EditText) findViewById(R.id.editTextMaeCA);
+    //@BindView(R.id.floatingActionButtonVoltarMenuPA) FloatingActionButton fbvoltarmenu;
+    FloatingActionButton fbvoltarmenu = (FloatingActionButton) findViewById(R.id.floatingActionButtonVoltarMenuPA);
+    //@BindView(R.id.floatingActionButtonAlterarAnimal) FloatingActionButton fbalterar;
+    FloatingActionButton fbalterar = (FloatingActionButton) findViewById(R.id.floatingActionButtonAlterarAnimal);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
